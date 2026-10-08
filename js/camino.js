@@ -40,7 +40,7 @@ const CAMINOS = [
     ]
    },
    "preguntar": {
-    "texto": "On te répond : « C'est la cousine d'Ane qui l'a dit, elle connaît la directrice. » Quelques personnes te traitent de rabat-joie parce que tu poses la question.",
+    "texto": "On te répond : « C'est la cousine d'une fille de la classe qui l'a dit, elle connaît la directrice. » Quelques personnes te traitent de rabat-joie parce que tu poses la question.",
     "opciones": [
      {
       "t": "Me taire pour ne pas faire mauvaise figure.",
@@ -103,7 +103,7 @@ const CAMINOS = [
   "start": "inicio",
   "escenas": {
    "inicio": {
-    "texto": "À la récré, ta bande rit devant une photo d'Iker, de ta classe, en train de trébucher en cours d'EPS. Mikel propose de la publier sur Instagram avec un mème. Tous te regardent en attendant ta réaction.",
+    "texto": "À la récré, ta bande rit devant une photo d'un garçon de ta classe en train de trébucher en cours d'EPS. Un camarade propose de la publier sur Instagram avec un mème. Tous te regardent en attendant ta réaction.",
     "opciones": [
      {
       "t": "Rire et dire : « Publie-la ! »",
@@ -120,23 +120,23 @@ const CAMINOS = [
     ]
    },
    "sube": {
-    "texto": "La photo obtient deux cents « j'aime » et un tas de commentaires. Le lendemain, Iker ne vient pas en classe. Dans le groupe, on dit : « C'était une blague, il ne supporte rien. »",
+    "texto": "La photo obtient deux cents « j'aime » et un tas de commentaires. Le lendemain, le garçon de la photo ne vient pas en classe. Dans le groupe, on dit : « C'était une blague, il ne supporte rien. »",
     "opciones": [
      {
       "t": "Leur donner raison : « C'était juste une blague. »",
       "to": "f_broma"
      },
      {
-      "t": "Écrire à Iker en privé pour voir comment il va.",
+      "t": "Écrire en privé au garçon de la photo pour voir comment il va.",
       "to": "f_reparar"
      }
     ]
    },
    "paso": {
-    "texto": "Mikel se moque : « Qu'est-ce que tu es ennuyeux. » Mais Unai, qui était resté silencieux, te regarde et hoche la tête : il a l'air de penser comme toi.",
+    "texto": "Celui qui a proposé de la publier se moque : « Qu'est-ce que tu es ennuyeux. » Mais une fille de la bande, qui était restée silencieuse, te regarde et hoche la tête : elle a l'air de penser comme toi.",
     "opciones": [
      {
-      "t": "Expliquer mes raisons et chercher le soutien d'Unai.",
+      "t": "Expliquer mes raisons et chercher le soutien de cette fille.",
       "to": "f_valiente"
      },
      {
@@ -149,7 +149,7 @@ const CAMINOS = [
     "texto": "La photo est publiée quand même. Pendant l'après-midi, tu ne cesses d'y penser et tu te sens mal à l'aise.",
     "opciones": [
      {
-      "t": "Parler avec Iker ou le raconter à la professeure principale.",
+      "t": "Parler avec le garçon de la photo ou le raconter à la professeure principale.",
       "to": "f_reparar"
      },
      {
@@ -163,19 +163,19 @@ const CAMINOS = [
    "f_broma": {
     "emoji": "😶",
     "titulo": "Juste une blague ?",
-    "texto": "Iker met des jours à revenir et évite le groupe. La photo continue de circuler même si vous l'avez déjà supprimée.",
+    "texto": "Le garçon de la photo met des jours à revenir et évite le groupe. La photo continue de circuler même si vous l'avez déjà supprimée.",
     "idea": "Une blague est drôle pour tout le monde ; si seuls certains rient aux dépens d'un autre, c'est une humiliation. Ce qui est mis sur internet ne peut pas être entièrement retiré."
    },
    "f_reparar": {
     "emoji": "🤝",
     "titulo": "Il n'est jamais trop tard pour réparer",
-    "texto": "Iker apprécie le message. Avec l'aide de la professeure principale, la photo est retirée et le sujet est abordé en heure de vie de classe.",
+    "texto": "Le garçon de la photo apprécie le message. Avec l'aide de la professeure principale, la photo est retirée et le sujet est abordé en heure de vie de classe.",
     "idea": "Réparer le mal (demander pardon, accompagner, prévenir un adulte), c'est aussi prendre parti. L'empathie : se mettre à la place de l'autre et agir en conséquence."
    },
    "f_valiente": {
     "emoji": "🦁",
     "titulo": "Dire non en groupe",
-    "texto": "Avec Unai de ton côté, le plan retombe. La photo n'est pas publiée. Mikel grogne, mais il ne se passe rien de plus.",
+    "texto": "Avec cette fille de ton côté, le plan retombe. La photo n'est pas publiée. Celui qui l'avait proposé grogne, mais il ne se passe rien de plus.",
     "idea": "Dans l'expérience d'Asch, il suffisait qu'une seule personne du groupe soit en désaccord pour que les autres osent dire ce qu'elles pensaient. Un allié change tout."
    },
    "f_testigo": {

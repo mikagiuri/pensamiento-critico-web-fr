@@ -48,7 +48,7 @@
   function temaNum(o){
     if (!o) return null;
     if (typeof o.tema === "number") return o.tema;
-    var m = String(o.tema || "").match(/(?:Tema|Thème)\s+(\d+)|(\d+)\.\s*gaia/); return m ? +(m[1] || m[2]) : null;
+    var m = String(o.tema || "").match(/(?:Tema|Thème|Topic)\s+(\d+)|(\d+)\.\s*gaia/); return m ? +(m[1] || m[2]) : null;
   }
   var IPC_KEY = /^(?:map-)?ipc-([a-z]+)/;
   var IPC_ALIAS = { conceptos: "pensar", publicidad: "medios", prejuicios: "sesgos", moda: "huella", consumo: "huella", fastfashion: "huella", critico: "pensar", bulos: "falacias", hecho: "pensar" };
@@ -83,7 +83,7 @@
      y comparten los recursos de los temas 6 y 7. */
   var SIGLA_TEMA = { AP: 6, AA: 7, M: 3.5 }, SIGLA_ORDEN = { AP: 5.1, AA: 5.2, M: 3.5 };  /* M: metafísica de Filosofía 1.º, entre T3 y T4 */
   function esAnexo(o){ return !!o && typeof o.temaN === "number"; }
-  var THEORY_EXTRA = { "fil-presocraticos": 1, "fil-helenismo": 5, "hf-descartes-makro": 14, "hf-platon-superficie": 6, "hf-descartes-simulacion": 14, "hf-platon-agustin": 11, "hf-platon-prejuicio": 6 };
+  var THEORY_EXTRA = { "fil-presocraticos": 1, "fil-helenismo": 5, "hf-descartes-makro": 14, "hf-platon-superficie": 6, "hf-descartes-simulacion": 14, "hf-platon-agustin": 11, "hf-platon-prejuicio": 6, "hf-montaigne-ensayos": 13 };
   /* unidades del curso de 2.º ESO («Clases») → tema */
   var CLASES_TEMA = { 1: "pensar", 2: "falacias", 3: "argumentar", 4: "falacias", 5: "falacias", 6: "medios", 7: "dialogo", 8: "sesgos", 9: "medios", 10: "pensar",
     11: "dialogo", 12: "grupo", 13: "huella", 14: "argumentar", 19: "huella", 20: "medios" };
@@ -364,8 +364,8 @@
     }
     if (!ks.length) return "";
     /* HF: agrupada por época, con el color de Ilustres; Filosofía 1.º: por rama (js/epocas.js). Las demás, seguidas. */
-    var EP = { int: "Introduction", ant: "Antique", med: "Médiévale", ren: "Renaissance", mod: "Moderne", ilu: "Illustration", con: "Contemporaine" };
-    var RM = { ant: "Antropología", con: "Conocimiento", log: "Lógica", eti: "Éthique", pol: "Política", est: "Estética" };
+    var EP = { int: "Introduction", ant: "Antique", med: "Médiévale", ren: "Renaissance", mod: "Moderne", ilu: "Lumières", con: "Contemporaine" };
+    var RM = { ant: "Anthropologie", con: "Connaissance", log: "Logique", eti: "Éthique", pol: "Politique", est: "Esthétique" };
     var grpNames = null, grpAttr = "", grpOf = null;
     if (subject === "hf"){ grpNames = EP; grpAttr = "ep"; grpOf = window.Epocas ? function(n){ return window.Epocas.epocaDeTema(n); } : function(n){ return n <= 2 ? "int" : n <= 10 ? "ant" : n <= 12 ? "med" : n === 13 ? "ren" : n <= 17 ? "mod" : n <= 20 ? "ilu" : "con"; }; }
     else if (subject === "fil"){ grpNames = RM; grpAttr = "rama"; grpOf = window.Ramas ? function(n){ return window.Ramas.ramaDeTema(n); } : function(n){ return ({ 2: "ant", 3: "con", 4: "log", 5: "eti", 6: "pol", 7: "est" })[n] || null; }; }

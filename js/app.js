@@ -343,7 +343,7 @@ document.querySelectorAll(".courses [data-view]").forEach(card => {
     '<p>Ce que voient les élèves : chaque matière avec ses contenus et sans le matériel du professeur. Ils sont mis à jour à chaque publication.</p></div>' +
     '<div class="pubwebs">' + webs.map(w =>
       '<div class="pubweb" style="--c:var(--' + w[0] + ')"><h3>' + w[1] + '</h3>' +
-      link(B + w[2] + "/", "Espagnol") + link(B + w[2] + "-eu/", "Basque") + link(B + w[2] + "-fr/", "Français") + '</div>').join("") + '</div>');
+      link(B + w[2] + "/", "Espagnol") + link(B + w[2] + "-eu/", "Basque") + link(B + w[2] + "-fr/", "Français") + link(B + w[2] + "-en/", "English") + '</div>').join("") + '</div>');
   document.querySelectorAll(".pw-copy").forEach(b => b.addEventListener("click", () => {
     const done = () => { b.textContent = "Copié"; b.classList.add("ok"); setTimeout(() => { b.textContent = "Copier"; b.classList.remove("ok"); }, 1600); };
     if (navigator.clipboard) navigator.clipboard.writeText(b.dataset.url).then(done, () => window.prompt("Copie le lien :", b.dataset.url));
