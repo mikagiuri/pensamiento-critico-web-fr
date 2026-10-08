@@ -286,7 +286,7 @@ const EsqGrid = (function (){
           (nd.rel ? '<span class="esqg-rel">' + esc(nd.rel) + "</span>" : "") + '<span class="esqg-t">' + md(nd.t) + "</span>" + (nd.a ? '<span class="esqg-a">' + md(nd.a) + "</span>" : "") + "</div>"; }).join("") +
       "</div></div>" +
       (hasX ? '<ol class="esqg-xl">' + v.cruces.map(function (x){ return "<li><em>" + esc(x.de) + '</em> <span class="esqg-xr">' + esc(x.rel) + "</span> <em>" + esc(x.a) + "</em></li>"; }).join("") + "</ol>" : "") +
-      '<p class="esq2-hint">' + (scrollX ? "Fais glisser la grille sur les côtés." + " " : "") + (short ? "Toca una caja para ver su texto completo." + " " : "") + "Chaque concept touche son concept parent (aussi en diagonale)." +
+      '<p class="esq2-hint">' + (scrollX ? "Fais glisser la grille sur les côtés." + " " : "") + (short ? "Touche une case pour voir son texte complet." + " " : "") + "Chaque concept touche son concept parent (aussi en diagonale)." +
         (tree.nodes.some(function (nd){ return nd.rel; }) ? " " + "Le type de relation est écrit à l’intérieur de chaque case." : "") + "</p>";   /* literales enteros entre comillas: así los traduce ui/<lang>.json */
     const grid = st.querySelector(".esqg");
     drawArrows(grid, tree, v.cruces);
