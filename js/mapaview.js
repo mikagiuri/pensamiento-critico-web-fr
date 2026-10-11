@@ -31,6 +31,7 @@ const MAPA_DESC = {
   citas: "Phrases célèbres des philosophes, expliquées.",
   adagios: "Devises classiques en latin et en grec, avec leur histoire.",
   duelo: "Débat contre l’ordinateur : repère ses sophismes ou réponds avec des raisons plus fortes, sans perdre ton sang-froid.",
+  epocas: "Les fiches de chaque époque, de la Grèce antique à nos jours, avec leur image du cosmos.",
   polemicas: "Des penseurs contemporains qui se sont affrontés : choisis avec qui tu es et pourquoi.",
   perseguidos: "Des philosophes et des scientifiques punis pour leurs idées : ce qui s’est passé et ce que l’on raconte souvent mal.",
   comunidades: "Écoles et cercles de penseurs, et les lieux où ils se réunissaient.",
