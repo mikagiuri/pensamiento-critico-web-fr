@@ -32,6 +32,8 @@ const MAPA_DESC = {
   adagios: "Devises classiques en latin et en grec, avec leur histoire.",
   duelo: "Débat contre l’ordinateur : repère ses sophismes ou réponds avec des raisons plus fortes, sans perdre ton sang-froid.",
   polemicas: "Des penseurs contemporains qui se sont affrontés : choisis avec qui tu es et pourquoi.",
+  perseguidos: "Des philosophes et des scientifiques punis pour leurs idées : ce qui s’est passé et ce que l’on raconte souvent mal.",
+  comunidades: "Écoles et cercles de penseurs, et les lieux où ils se réunissaient.",
   mundo: "Si la classe était le monde : les données de la planète, dans ta salle de classe.",
   camino: "Des histoires où tu choisis quoi faire et où tu vois les conséquences.",
   eudaimonia: "Un jeu sur le bonheur selon Aristote.",
@@ -65,7 +67,7 @@ const MAPA_DESC = {
   signos: "Cours de langue des signes."
 };
 /* cuántos elementos tiene cada sección (si su colección está cargada en esta web) */
-const MAPA_CUENTA = { tarjetas: "DECKS", cuestionarios: "QUIZZES", glosario: "GLOSARIO", ilustres: "ILUSTRES", citas: "CITAS", adagios: "ADAGIOS", polemicas: "POLEMICAS",
+const MAPA_CUENTA = { tarjetas: "DECKS", cuestionarios: "QUIZZES", glosario: "GLOSARIO", ilustres: "ILUSTRES", citas: "CITAS", adagios: "ADAGIOS", polemicas: "POLEMICAS", perseguidos: "PERSEGUIDOS", comunidades: "COMUNIDADES",
   infografias: "INFOGRAFIAS", mapas: "MAPS", esquemas: "ESQUEMAS", cronogramas: "CRONOGRAMAS", genealogias: "GENEALOGIAS", lecturas: "LECTURAS",
   galeria: "GALERIA", dilemas: "DILEMAS", disertaciones: "DISERTACIONES", nudos: "NUDOS", pistas: "PISTAS", materiales: "MATERIALS" };
 function mapaG(name){ try { return (0, eval)("typeof " + name + " !== 'undefined' ? " + name + " : undefined"); } catch (e){ return undefined; } }
