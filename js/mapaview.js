@@ -45,7 +45,7 @@ const MAPA_DESC = {
   cronogramas: "Frises chronologiques des auteurs et des époques.",
   genealogias: "Qui a influencé qui : maîtres, disciples et rivaux.",
   esquemas: "Schémas des idées principales de chaque thème.",
-  esqautor: "Un schéma par auteur, pour la PAU.",
+  esqautor: "Un résumé par auteur, pour la PAU.",
   diapositivas: "Présentations des thèmes.",
   rescritura: "Apprends à reformuler un texte avec tes propres mots.",
   pistas: "Des problèmes avec des indices qui se dévoilent peu à peu.",
