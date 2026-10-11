@@ -29,7 +29,7 @@ const MAPA_DESC = {
   glosario: "Les concepts de chaque thème, avec leur définition et leur origine.",
   ilustres: "Biographies des penseurs et fiches de chaque époque.",
   citas: "Phrases célèbres des philosophes, expliquées.",
-  adagios: "Devises classiques en latin et en grec, avec leur histoire.",
+  adagios: "Devises classiques en latin et en grec, et citations célèbres des philosophes : ce qu’elles veulent dire et quand les utiliser.",
   duelo: "Débat contre l’ordinateur : repère ses sophismes ou réponds avec des raisons plus fortes, sans perdre ton sang-froid.",
   epocas: "Les fiches de chaque époque, de la Grèce antique à nos jours, avec leur image du cosmos.",
   polemicas: "Des penseurs contemporains qui se sont affrontés : choisis avec qui tu es et pourquoi.",
