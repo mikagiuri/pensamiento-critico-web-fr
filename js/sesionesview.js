@@ -70,7 +70,7 @@ function renderSesFilter(){
     '<div class="fgroup"><span class="flabel">Matière</span>' + subj + '</div>' +
     '<div class="seswrap"><span class="flabel">Semaine</span><div class="sesnav">' +
       '<button class="sesbtn" id="sesprev" aria-label="Semana anterior">‹</button>' +
-      '<select class="sesweek" id="sesweek" aria-label="Elegir semana">' + opts + '</select>' +
+      '<select class="sesweek" id="sesweek" aria-label="Choisir la semaine">' + opts + '</select>' +
       '<button class="sesbtn" id="sesnext" aria-label="Semana siguiente">›</button>' +
       '<button class="sesbtn" id="seshoy">Cette semaine</button>' +
     '</div></div>';

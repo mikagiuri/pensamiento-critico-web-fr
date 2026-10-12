@@ -95,7 +95,7 @@ function renderGloControls(){
       : '') +
     '<div class="glotools">' +
       '<input class="glosearch" id="glosearch" type="search" placeholder="Chercher un terme ou une définition…" autocomplete="off" aria-label="Chercher dans le glossaire">' +
-      '<select class="gloarea" id="gloarea" aria-label="Filtrar por área">' + areaOpts + '</select>' +
+      '<select class="gloarea" id="gloarea" aria-label="Filtrer par domaine">' + areaOpts + '</select>' +
     '</div>';
 
   box.querySelectorAll("[data-sub]").forEach(b => b.addEventListener("click", () => {
