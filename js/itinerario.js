@@ -28,7 +28,7 @@
     blEstudiar: "Étudier", blPau: "Préparer la PAU", blPensar: "Penser et écrire", blAmpliar: "Approfondir", pauBadge: "Lecture PAU",
     cronogramas: "Chronogrammes", disertaciones: "Dissertations", comparativas: "Comparatives", polemicas: "Polémiques", comunidades: "Communautés",
     perseguidos: "Persécutés", duelo: "Duel de raisons", juegos: "Jeux", logica: "Coin de logique",
-    videosEu: "Vidéos en basque (Ikusgela)", videoEu: "Vidéo en basque d'Ikusgela", infografia: "Infographie", mapa: "Carte", esquema: "Schéma", lectura: "Lecture", dilema: "Dilemme", comentario: "Commentaire",
+    videosEu: "Vidéos en basque (Ikusgela)", videoEu: "Vidéo en basque d'Ikusgela", transcripcion: "Transcription", transcripcionT: "Texte de la vidéo : sous-titres d'Ikusgela", infografia: "Infographie", mapa: "Carte", esquema: "Schéma", lectura: "Lecture", dilema: "Dilemme", comentario: "Commentaire",
     pau: "Parcours PAU", pauLead: "Prépare la PAU dans l’ordre : d’abord comment se déroule l’épreuve, puis chaque exercice et, à la fin, l’entraînement par thèmes.",
     pau1: "Comment se déroule l’épreuve", pau2: "Exercice 1 · Le commentaire de texte", pau3: "Exercice 2 · La dissertation",
     pau4: "Exercice 3 · L’exposé", pau5: "Comment elle est corrigée", pau6: "Entraîne-toi par thèmes", inicio: "Accueil",
@@ -291,7 +291,7 @@
       return ts.indexOf(tema) >= 0;
     }).map(function(c){ return { go: "cronogramas", arg: c.id, label: strip(c.title) }; });
   }
-  var DISERT_TEMA = { "modelo-platon": [6, 9], "modelo-kant": [20], "modelo-nietzsche": [23], "modelo-medieval": [12],
+  var DISERT_TEMA = { "modelo-platon": [6, 9], "modelo-kant": [20], "modelo-nietzsche": [23], "modelo-medieval": [12], "modelo-descartes": [14], "modelo-beauvoir": [26],
     "fil-modelo-filosofia": [1], "fil-modelo-naturaleza": [2], "fil-modelo-maquina": [2], "fil-modelo-vidabuena": [5], "fil-modelo-justicia": [6] };
   function disertDe(subject, tema){
     var D = coll("DISERTACIONES"); if (!D || !view("disertaciones")) return [];
@@ -338,7 +338,9 @@
     var videosArr = Array.isArray(V) ? V.filter(function(v){ return (v.temas || []).indexOf(key) >= 0; }) : [];
     var videosHtml = videosArr.length ? '<div class="fin-row"><span class="fin-l">' + esc(t("videosEu")) + '</span><div class="fin-links">' +
       videosArr.map(function(v){ return '<a class="itin-lnk" href="https://www.youtube.com/watch?v=' + esc(v.id) + '" target="_blank" rel="noopener" hreflang="eu" title="' + esc(t("videoEu") + " · «" + v.eu_titulo + "»") + '">' +
-        esc(euWeb ? v.eu_titulo : v.es) + ' <i>' + esc(v.dur) + '</i></a>'; }).join("") + '</div></div>' : "";
+        esc(euWeb ? v.eu_titulo : v.es) + ' <i>' + esc(v.dur) + '</i></a>' +
+        /* (19-10) su transcripción (media/ikusgela/<id>.html, subtítulos de Ikusgela) */
+        '<a class="itin-lnk" href="media/ikusgela/' + esc(v.id) + '.html" target="_blank" rel="noopener" hreflang="eu" title="' + esc(t("transcripcionT")) + '">' + esc(t("transcripcion")) + '</a>'; }).join("") + '</div></div>' : "";
     var P = { tarjetas: row(t("tarjetas"), items("tarjetas", subject, tema)), cuestionarios: row(t("cuestionarios"), items("cuestionarios", subject, tema)),
       infografias: row(t("infografias"), items("infografias", subject, tema)), mapas: row(t("mapas"), items("mapas", subject, tema)),
       esquemas: row(t("esquemas"), items("esquemas", subject, tema)), lecturas: row(t("lecturas"), items("lecturas", subject, tema)),
