@@ -44,6 +44,7 @@ const MAPA_DESC = {
   dilemas: "Des cas difficiles pour débattre de ce qui est bien.",
   logica: "Tables de vérité, syllogismes, carré des oppositions et diagrammes.",
   leibniz: "Leibniz et ses inventions : la machine à calculer, le binaire et le calcul infinitésimal.",
+  universo: "L'univers d'Aristote : les quatre éléments, la chute des corps, l'âme et les êtres vivants, et les fissures qu'a ouvertes la science moderne.",
   infografias: "Chaque thème résumé en une image.",
   galeria: "Œuvres d’art et illustrations des thèmes.",
   mapas: "Cartes conceptuelles des thèmes.",
