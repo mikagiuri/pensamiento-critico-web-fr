@@ -44,6 +44,7 @@ const MAPA_DESC = {
   dilemas: "Des cas difficiles pour débattre de ce qui est bien.",
   logica: "Tables de vérité, syllogismes, carré des oppositions et diagrammes.",
   leibniz: "Leibniz et ses inventions : la machine à calculer, le binaire et le calcul infinitésimal.",
+  palabra: "L'art de la parole : poétique, rhétorique et topiques, d'Aristote à la littérature, au théâtre et à la publicité d'aujourd'hui.",
   universo: "L'univers d'Aristote : les quatre éléments, la chute des corps, l'âme et les êtres vivants, et les fissures qu'a ouvertes la science moderne.",
   infografias: "Chaque thème résumé en une image.",
   galeria: "Œuvres d’art et illustrations des thèmes.",
