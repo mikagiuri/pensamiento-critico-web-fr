@@ -339,22 +339,30 @@
     ],
     "fil-t2": [
       { k: "hf-antropologia", n: 7, tit: "L'anthropologie classique : Socrate, Platon et Aristote", txt: "En 1re année, tu as vu l’âme dans le problème corps-esprit, avec Platon et Aristote ; en 2e année, tu liras le tournant de Socrate et les trois conceptions de la psyché : âme, vertu et vie bonne." },
-      { k: "hf-metafisica", n: 15, tit: "Le débat métaphysique moderne : dualisme et matérialisme", txt: "En 1re année, tu as vu le dualisme de Descartes et le matérialisme de Hobbes ; en 2e année, tu verras ce débat moderne en entier, avec le monisme de Spinoza et le tournant empiriste de Locke." }
+      { k: "hf-metafisica", n: 15, tit: "Le débat métaphysique moderne : dualisme et matérialisme", txt: "En 1re année, tu as vu le dualisme de Descartes et le matérialisme de Hobbes ; en 2e année, tu verras ce débat moderne en entier, avec le monisme de Spinoza et le tournant empiriste de Locke." },
+      { k: "hf-sospecha", n: 21, tit: "Les philosophes du soupçon : Marx, Nietzsche et Freud", txt: "En 1re année, tu as vu Marx, Nietzsche et Freud parmi les conceptions de l’être humain — le travail, le surhomme et un moi qui « n’est pas maître dans sa propre maison » — ; en 2e année, tu les verras ensemble comme les « maîtres du soupçon », qui mettent en crise l’idée d’un sujet maître de lui-même." }
     ],
     "fil-t3": [
       { k: "hf-racionalismo", n: 14, tit: "Rationalisme et empirisme : Descartes et Hume", txt: "En 1re année de Bachillerato, tu as vu le rationalisme et l’empirisme comme deux sources opposées de la connaissance ; en 2e année, tu liras Descartes et Hume de près : le doute méthodique, le cogito et la critique de la causalité." },
-      { k: "hf-kant", n: 19, tit: "La philosophie critique de Kant et le problème de la métaphysique", txt: "En 1re année, tu as vu le criticisme de Kant unir raison et expérience ; en 2e année, tu verras comment l’espace, le temps et les catégories ordonnent l’expérience et pourquoi nous ne connaissons pas les choses « en soi »." }
+      { k: "hf-kant", n: 19, tit: "La philosophie critique de Kant et le problème de la métaphysique", txt: "En 1re année, tu as vu le criticisme de Kant unir raison et expérience ; en 2e année, tu verras comment l’espace, le temps et les catégories ordonnent l’expérience et pourquoi nous ne connaissons pas les choses « en soi »." },
+      { k: "hf-sofistas", n: 5, tit: "Les Lumières grecques : les sophistes, Socrate et Aspasie", txt: "En 1re année, tu as vu le relativisme de Protagoras — « l’homme est la mesure de toute chose » — parmi les positions face à la vérité ; en 2e année, tu verras les sophistes et le tournant anthropologique des Lumières grecques, avec Socrate et Aspasie." },
+      { k: "hf-platon", n: 6, tit: "Platon : la théorie des Idées et la République", txt: "En 1re année, tu as vu la distinction de Platon entre opinion (doxa) et science (episteme) et son idéalisme des Idées ; en 2e année, tu liras toute sa théorie des Idées et la cité juste de la République." },
+      { k: "hf-modernidad", n: 13, tit: "La naissance de la modernité : Renaissance, protestantisme et révolution scientifique", txt: "En 1re année, tu as vu la révolution scientifique de Galilée et la méthode hypothético-déductive, et comment l’idée de science et de cosmos a changé ; en 2e année, tu verras cette révolution au sein de la naissance de la modernité, avec la Renaissance et la Réforme." }
     ],
     "fil-t5": [
       { k: "hf-etica", n: 8, tit: "L'éthique classique : intellectualisme, vertus et eudaimonia", txt: "En 1re année, tu as vu la vertu comme juste milieu et l’intellectualisme de Socrate ; en 2e année, tu liras toute l’éthique classique : l’areté, l’eudaimonía et les réponses de Socrate, Platon et Aristote." },
       { k: "hf-helenismo", n: 10, tit: "L'hellénisme : cynisme, stoïcisme, épicurisme et scepticisme", txt: "En 1re année, tu as vu l’hédonisme d’Épicure comme une éthique du bonheur ; en 2e année, tu verras l’hellénisme en entier : cynisme, stoïcisme, épicurisme et scepticisme répondant à la question de savoir comment vivre dans un monde incertain." },
-      { k: "hf-etica-deber", n: 20, tit: "Éthiques du bonheur et éthiques du devoir : Kant face à l'utilitarisme", txt: "En 1re année, tu as vu l’éthique formelle de Kant et l’utilitarisme de Bentham et Mill ; en 2e année, tu liras ce choc en profondeur : les éthiques du devoir face à celles du bonheur." }
+      { k: "hf-etica-deber", n: 20, tit: "Éthiques du bonheur et éthiques du devoir : Kant face à l'utilitarisme", txt: "En 1re année, tu as vu l’éthique formelle de Kant et l’utilitarisme de Bentham et Mill ; en 2e année, tu liras ce choc en profondeur : les éthiques du devoir face à celles du bonheur." },
+      { k: "hf-sofistas", n: 5, tit: "Les Lumières grecques : les sophistes, Socrate et Aspasie", txt: "En 1re année, tu as vu l’intellectualisme moral de Socrate, pour qui nul ne fait le mal sciemment ; en 2e année, tu le verras dans son contexte historique : l’Athènes démocratique des sophistes, de Socrate et d’Aspasie." }
     ],
     "fil-t6": [
       { k: "hf-contrato", n: 16, tit: "L'origine de la société et du pouvoir : Machiavel et le contrat social", txt: "En 1re année, tu as vu le contrat social de Hobbes, Locke et Rousseau comme origine de l’État ; en 2e année, tu liras en outre Machiavel et l’idée de Montesquieu de limiter le pouvoir." },
       { k: "hf-utilitarismo", n: 17, tit: "Utilitarisme et libéralisme : les bases du capitalisme", txt: "En 1re année, tu as vu le libéralisme politique de Locke et le contrat social ; en 2e année, tu verras les bases du libéralisme économique : l’utilitarisme de Bentham et Mill et le marché d’Adam Smith." },
       { k: "hf-capitalismo", n: 22, tit: "La critique du capitalisme : de Marx à Rawls", txt: "En 1re année, tu as vu la critique du capitalisme par Marx : lutte des classes, plus-value et aliénation ; en 2e année, tu liras comment elle se poursuit chez Gramsci, l’École de Francfort, Habermas et Rawls." },
-      { k: "hf-beauvoir", n: 26, tit: "Le féminisme contemporain : Simone de Beauvoir", txt: "En 1re année, tu as vu Beauvoir dans les vagues du féminisme et son « On ne naît pas femme : on le devient » ; en 2e année, tu liras son existentialisme en profondeur, ainsi que Butler, Fraser et Nussbaum." }
+      { k: "hf-beauvoir", n: 26, tit: "Le féminisme contemporain : Simone de Beauvoir", txt: "En 1re année, tu as vu Beauvoir dans les vagues du féminisme et son « On ne naît pas femme : on le devient » ; en 2e année, tu liras son existentialisme en profondeur, ainsi que Butler, Fraser et Nussbaum." },
+      { k: "hf-platon", n: 6, tit: "Platon : la théorie des Idées et la République", txt: "En 1re année, tu as vu la République de Platon comme la première grande utopie, la cité juste des philosophes-rois ; en 2e année, tu la liras en profondeur, liée à sa théorie de l’âme et des Idées." },
+      { k: "hf-politica", n: 9, tit: "La politique classique : Platon et Aristote", txt: "En 1re année, tu as vu Aristote définir l’être humain comme animal politique et la cité juste de la République ; en 2e année, tu compareras en profondeur les deux grands modèles politiques de Platon et d’Aristote." },
+      { k: "hf-ilustracion", n: 18, tit: "Le projet des Lumières : puissance et limites de la raison", txt: "En 1re année, tu as vu les droits de l’homme, le contrat social et la première vague féministe d’Olympe de Gouges et de Wollstonecraft ; en 2e année, tu verras le projet des Lumières d’où naissent ces droits et cette critique : la confiance en la raison et ses limites." }
     ],
     "hf-antropologia": [
       { k: "fil-t2", n: 2, tit: "Qu'est-ce que l'être humain ?", txt: "Tu as déjà vu en 1re année l’âme dans le problème corps-esprit, avec le dualisme de Platon et l’âme-forme d’Aristote ; ici, tu as lu le tournant de Socrate et les trois conceptions de la psyché." }
@@ -380,6 +388,9 @@
     "hf-helenismo": [
       { k: "fil-t5", n: 5, tit: "Les questions de l'éthique", txt: "Tu as déjà vu en 1re année l’hédonisme d’Épicure et son ataraxie ; ici, tu as lu l’hellénisme en entier : quatre écoles qui répondent à la question de savoir comment bien vivre dans un monde incertain." }
     ],
+    "hf-ilustracion": [
+      { k: "fil-t6", n: 6, tit: "La vie en société (Philosophie politique)", txt: "Tu as déjà vu en 1re année les droits de l’homme, le contrat social et la première vague féministe d’Olympe de Gouges et de Wollstonecraft ; ici, tu as étudié le projet des Lumières d’où naissent ces droits et cette critique." }
+    ],
     "hf-kant": [
       { k: "fil-t3", n: 3, tit: "Que pouvons-nous connaître ?", txt: "Tu as déjà vu en 1re année le criticisme de Kant comme synthèse du rationalisme et de l’empirisme ; ici, tu as lu sa philosophie critique en profondeur : phénomène, noumène et limites de la raison." }
     ],
@@ -390,14 +401,31 @@
       { k: "fil-t2", n: 2, tit: "Qu'est-ce que l'être humain ?", txt: "Tu as déjà vu en 1re année le problème corps-esprit avec le dualisme de Descartes et le matérialisme de Hobbes ; ici, tu as lu ce débat moderne en entier, avec le monisme de Spinoza et le tournant de Locke." },
       { k: "fil-metafisica", n: "M", tit: "La réalité : qu'y a-t-il et comment est-ce ? (Métaphysique)", txt: "Tu as déjà vu en 1re année le monisme, le dualisme et le matérialisme comme positions sur la substance ; ici, tu as lu ce débat à l’époque moderne, avec Descartes, Hobbes, Spinoza et Locke." }
     ],
+    "hf-modernidad": [
+      { k: "fil-t3", n: 3, tit: "Que pouvons-nous connaître ?", txt: "Tu as déjà vu en 1re année la révolution scientifique et la méthode hypothético-déductive de Galilée, et comment elles ont changé l’idée de science et de cosmos ; ici, tu as parcouru la Renaissance et cette révolution comme naissance de la modernité." }
+    ],
     "hf-mito": [
       { k: "fil-t1", n: 1, tit: "Qu’est-ce que la philosophie ?", txt: "Tu as déjà vu en 1re année le passage du mythe au logos et les traits de la pensée mythique ; ici, tu as lu la naissance de la philosophie en Ionie, qui explique la nature sans le surnaturel." }
+    ],
+    "hf-platon": [
+      { k: "fil-t3", n: 3, tit: "Que pouvons-nous connaître ?", txt: "Tu as déjà vu en 1re année la distinction de Platon entre opinion (doxa) et science (episteme) et son idéalisme des Idées ; ici, tu as étudié toute la théorie des Idées et le chemin de la connaissance vers le Bien." },
+      { k: "fil-t6", n: 6, tit: "La vie en société (Philosophie politique)", txt: "Tu as déjà vu en 1re année la République de Platon comme la première grande utopie, la cité juste gouvernée par les philosophes ; ici, tu l’as lue en profondeur, liée à sa théorie de l’âme et des Idées." }
+    ],
+    "hf-politica": [
+      { k: "fil-t6", n: 6, tit: "La vie en société (Philosophie politique)", txt: "Tu as déjà vu en 1re année Aristote définir l’être humain comme animal politique et la République de Platon comme cité juste ; ici, tu as comparé en profondeur leurs deux modèles de la meilleure communauté." }
     ],
     "hf-preso": [
       { k: "fil-t1", n: 1, tit: "Qu’est-ce que la philosophie ?", txt: "Tu as déjà vu en 1re année l’arché de Thalès comme premier pas du logos ; ici, tu as parcouru les réponses des présocratiques à la question de la réalité et du principe de toutes choses." }
     ],
     "hf-racionalismo": [
       { k: "fil-t3", n: 3, tit: "Que pouvons-nous connaître ?", txt: "Tu as déjà vu en 1re année le rationalisme et l’empirisme dans le tableau des sources de la connaissance ; ici, tu as lu Descartes et Hume de près : le doute, le cogito et la critique de la causalité." }
+    ],
+    "hf-sofistas": [
+      { k: "fil-t3", n: 3, tit: "Que pouvons-nous connaître ?", txt: "Tu as déjà vu en 1re année le relativisme de Protagoras — « l’homme est la mesure de toute chose » — parmi les positions face à la vérité ; ici, tu l’as situé dans son monde : les Lumières grecques et le tournant des sophistes vers l’être humain et la polis." },
+      { k: "fil-t5", n: 5, tit: "Les questions de l'éthique", txt: "Tu as déjà vu en 1re année l’intellectualisme moral de Socrate, pour qui nul ne fait le mal sciemment ; ici, tu as connu le Socrate qui l’a défendu, face aux sophistes, dans l’Athènes démocratique." }
+    ],
+    "hf-sospecha": [
+      { k: "fil-t2", n: 2, tit: "Qu'est-ce que l'être humain ?", txt: "Tu as déjà vu en 1re année Marx, Nietzsche et Freud parmi les conceptions de l’être humain — le travail, le surhomme et un moi qui « n’est pas maître dans sa propre maison » — ; ici, tu les as lus ensemble comme les maîtres du soupçon." }
     ],
     "hf-utilitarismo": [
       { k: "fil-t6", n: 6, tit: "La vie en société (Philosophie politique)", txt: "Tu as déjà vu en 1re année le libéralisme politique de Locke et le contrat social ; ici, tu as lu les bases du libéralisme économique : l’utilitarisme de Bentham et Mill et le marché d’Adam Smith." }
@@ -662,5 +690,5 @@
     if (G("quizKey") != null) renderQuiz(G("quizKey"));
   } catch (e){}
 
-  window.Itinerario = { itinerario: itinerario, temaOf: temaOf, go: go, epocaFicha: epocaFicha, gloTema: gloTema, temasDe: temasDe, esAnexo: esAnexo };
+  window.Itinerario = { itinerario: itinerario, temaOf: temaOf, go: go, epocaFicha: epocaFicha, gloTema: gloTema, temasDe: temasDe, esAnexo: esAnexo, PUENTES: PUENTES };
 })();
