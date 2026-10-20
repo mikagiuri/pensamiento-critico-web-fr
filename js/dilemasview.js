@@ -23,7 +23,7 @@ const DIL_TXT = {
   mantengo: "Je maintiens mon choix", cambiaria: "Je changerais d’avis", siguiente: "Suivant :", tipo: "Type de dilemme",
   /* Bachillerato (25-09): pregunta universal, escuelas, debate de época, reflexión PAU */
   preguntaFondo: "La question de fond", escuelas: "Les écoles répondent", elige: "elige", debateEpoca: "Le débat de son époque",
-  verTeoria: "Voir dans la théorie", pau: "Réflexion PAU (Exercice 2)",
+  verTeoria: "Voir dans la théorie", pau: "Réflexion PAU (Exercice 2)", seguir: "Pour aller plus loin :",   /* (20-10) enlaces de un dilema a Perseguidos o a una exploración */
   como: "Comment jouer :", howto: "Ouvre un dilemme, choisis A ou B, écris pourquoi et regarde « pour penser » : à la fin, tu décides si tu maintiens ton choix ou si tu changes."
 };
 const dil = { group: (Object.keys(DIL_GROUPS).find(g => typeof DILEMAS !== "undefined" && DILEMAS.some(d => d.grupo === g)) || "tecno"), cur: null, step: 0 };
@@ -36,6 +36,16 @@ function dilVotes(){ const v = store.get(DIL_VOTES_KEY, {}); return v && typeof 
 function dilClassMode(){ return !!store.get(DIL_CLASS_KEY, false); }
 function dilList(g){ return DILEMAS.filter(d => !g || d.grupo === g); }
 function dilById(id){ return DILEMAS.find(d => d.id === id); }
+/* (20-10) enlace profundo #dilemas/<id> y enlaces «Para seguir» (solo los que existen en esta web) */
+function loadDilema(id){ const d = dilById(id); if (!d) return; dil.group = d.grupo; openDil(id); }
+function dilEnlaces(d){
+  const ok = h => { const m = /^#(teoria|perseguidos|ilustres)\/(.+)$/.exec(h || ""); if (!m) return false;
+    if (m[1] === "teoria") return typeof THEORY !== "undefined" && !!THEORY[m[2]];
+    if (m[1] === "perseguidos") return typeof PERSEGUIDOS !== "undefined" && PERSEGUIDOS.some(c => c.id === m[2]);
+    return typeof ILUSTRES !== "undefined" && !!ILUSTRES[m[2]]; };
+  const ls = (d.enlaces || []).filter(e => ok(e.href));
+  return ls.length ? '<p class="dil-links"><b>' + DIL_TXT.seguir + '</b> ' + ls.map(e => '<a href="' + e.href + '">' + dilEsc(e.t) + '</a>').join(' · ') + '</p>' : '';
+}
 
 /* ---------- portada: grupos y tarjetas ---------- */
 function renderDilStart(){
@@ -124,7 +134,7 @@ function renderDil(){
       '<p><b>' + DIL_TXT.enJuego + '</b> ' + dilEsc(d.enjuego) + '</p>' +
       (d.otra ? '<p class="dil-otra"><b>' + DIL_TXT.otraSalida + '</b> ' + dilEsc(d.otra) + '</p>' : '') +
       '<ol>' + (d.preguntas || []).map(q => '<li>' + dilEsc(q) + '</li>').join("") + '</ol>' +
-      (d.dato ? '<p class="dil-dato"><b>' + DIL_TXT.unDato + '</b> ' + dilEsc(d.dato) + '</p>' : '') + '</div>';
+      (d.dato ? '<p class="dil-dato"><b>' + DIL_TXT.unDato + '</b> ' + dilEsc(d.dato) + '</p>' : '') + dilEnlaces(d) + '</div>';
     /* Bachillerato: las escuelas responden (con ficha de Ilustres) y el debate de su época (texto + unidad de teoría) */
     if (Array.isArray(d.escuelas) && d.escuelas.length){
       const I = typeof ILUSTRES !== "undefined" ? ILUSTRES : {};
