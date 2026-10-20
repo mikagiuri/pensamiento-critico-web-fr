@@ -27,6 +27,7 @@
     nTarjetas: "{n} cartes", nPreguntas: "{n} questions", anterior: "Thème précédent", siguienteTema: "Thème suivant", anexos: "Explorations", epoca: "L’époque", epocaDe: "Époque : {e}", volverTema: "Retour au thème",
     blEstudiar: "Étudier", blPau: "Préparer la PAU", blPensar: "Penser et écrire", blAmpliar: "Approfondir", pauBadge: "Lecture PAU",
     cronogramas: "Chronogrammes", disertaciones: "Dissertations", comparativas: "Comparatives", polemicas: "Polémiques", comunidades: "Communautés",
+    puenteFil: "Tu le reverras en 2e année de Bachillerato", puenteHf: "Tu l’as déjà vu en 1re année de Bachillerato", hfSig: "HP",
     perseguidos: "Persécutés", duelo: "Duel de raisons", juegos: "Jeux", logica: "Coin de logique",
     videosEu: "Vidéos en basque (Ikusgela)", videoEu: "Vidéo en basque d'Ikusgela", transcripcion: "Transcription", transcripcionT: "Texte de la vidéo : sous-titres d'Ikusgela", infografia: "Infographie", mapa: "Carte", esquema: "Schéma", lectura: "Lecture", dilema: "Dilemme", comentario: "Commentaire",
     pau: "Parcours PAU", pauLead: "Prépare la PAU dans l’ordre : d’abord comment se déroule l’épreuve, puis chaque exercice et, à la fin, l’entraînement par thèmes.",
@@ -323,6 +324,94 @@
     if (subject === "fil") js.push("rayuela");   /* decisión del profesor (18-10): Rayuela en todos los temas de 1.º */
     return js.filter(function(v){ return view(v); }).map(function(v){ return { go: v, arg: "", label: navLabel(v, "juegos") }; });
   }
+  /* (19-10) puentes 1.º <-> 2.º (informe fil1->hf2 §5.2; borrador de DSH, visto bueno de la 50). Muestra aprobada por el profesor; extendido a todos los temas del mapa (borrador 3 de DSH).
+     En la web completa el enlace abre el tema; en las webs del alumnado, la otra web publicada en la misma lengua. */
+  var PUENTES = {
+    "fil-metafisica": [
+      { k: "hf-medieval", n: 11, tit: "La philosophie médiévale : étapes, méthodes et problème des universaux", txt: "En 1re année, tu as vu les arguments médiévaux sur Dieu, d’Anselme et de Thomas d’Aquin ; en 2e année, tu verras tout le Moyen Âge : le rapport foi-raison, ses étapes et le problème des universaux." },
+      { k: "hf-fe-razon", n: 12, tit: "Foi et raison : l'assimilation de la philosophie grecque et l'existence de Dieu", txt: "En 1re année, tu as vu les cinq voies de Thomas d’Aquin et la distinction essence-existence ; en 2e année, tu verras comment le christianisme a assimilé la philosophie grecque, avec Augustin, Thomas d’Aquin, Avicenne et Ockham." },
+      { k: "hf-metafisica", n: 15, tit: "Le débat métaphysique moderne : dualisme et matérialisme", txt: "En 1re année, tu as vu le monisme, le dualisme et le matérialisme comme réponses sur la substance ; en 2e année, tu verras ce débat à l’époque moderne, avec Descartes, Hobbes, Spinoza et Locke." }
+    ],
+    "fil-t1": [
+      { k: "hf-mito", n: 3, tit: "La naissance de la philosophie : du mythe au logos", txt: "En 1re année, tu as vu le passage du mythe au logos comme naissance de la philosophie ; en 2e année, tu liras les premiers philosophes de Milet expliquant la réalité par la raison, sans dieux." },
+      { k: "hf-preso", n: 4, tit: "Le problème de la réalité chez les présocratiques", txt: "En 1re année, tu as vu Thalès de Milet chercher l’arché comme premier principe ; en 2e année, tu verras pourquoi chaque présocratique en a proposé un différent et comment ils comprenaient la réalité." }
+    ],
+    "fil-t2": [
+      { k: "hf-antropologia", n: 7, tit: "L'anthropologie classique : Socrate, Platon et Aristote", txt: "En 1re année, tu as vu l’âme dans le problème corps-esprit, avec Platon et Aristote ; en 2e année, tu liras le tournant de Socrate et les trois conceptions de la psyché : âme, vertu et vie bonne." },
+      { k: "hf-metafisica", n: 15, tit: "Le débat métaphysique moderne : dualisme et matérialisme", txt: "En 1re année, tu as vu le dualisme de Descartes et le matérialisme de Hobbes ; en 2e année, tu verras ce débat moderne en entier, avec le monisme de Spinoza et le tournant empiriste de Locke." }
+    ],
+    "fil-t3": [
+      { k: "hf-racionalismo", n: 14, tit: "Rationalisme et empirisme : Descartes et Hume", txt: "En 1re année de Bachillerato, tu as vu le rationalisme et l’empirisme comme deux sources opposées de la connaissance ; en 2e année, tu liras Descartes et Hume de près : le doute méthodique, le cogito et la critique de la causalité." },
+      { k: "hf-kant", n: 19, tit: "La philosophie critique de Kant et le problème de la métaphysique", txt: "En 1re année, tu as vu le criticisme de Kant unir raison et expérience ; en 2e année, tu verras comment l’espace, le temps et les catégories ordonnent l’expérience et pourquoi nous ne connaissons pas les choses « en soi »." }
+    ],
+    "fil-t5": [
+      { k: "hf-etica", n: 8, tit: "L'éthique classique : intellectualisme, vertus et eudaimonia", txt: "En 1re année, tu as vu la vertu comme juste milieu et l’intellectualisme de Socrate ; en 2e année, tu liras toute l’éthique classique : l’areté, l’eudaimonía et les réponses de Socrate, Platon et Aristote." },
+      { k: "hf-helenismo", n: 10, tit: "L'hellénisme : cynisme, stoïcisme, épicurisme et scepticisme", txt: "En 1re année, tu as vu l’hédonisme d’Épicure comme une éthique du bonheur ; en 2e année, tu verras l’hellénisme en entier : cynisme, stoïcisme, épicurisme et scepticisme répondant à la question de savoir comment vivre dans un monde incertain." },
+      { k: "hf-etica-deber", n: 20, tit: "Éthiques du bonheur et éthiques du devoir : Kant face à l'utilitarisme", txt: "En 1re année, tu as vu l’éthique formelle de Kant et l’utilitarisme de Bentham et Mill ; en 2e année, tu liras ce choc en profondeur : les éthiques du devoir face à celles du bonheur." }
+    ],
+    "fil-t6": [
+      { k: "hf-contrato", n: 16, tit: "L'origine de la société et du pouvoir : Machiavel et le contrat social", txt: "En 1re année, tu as vu le contrat social de Hobbes, Locke et Rousseau comme origine de l’État ; en 2e année, tu liras en outre Machiavel et l’idée de Montesquieu de limiter le pouvoir." },
+      { k: "hf-utilitarismo", n: 17, tit: "Utilitarisme et libéralisme : les bases du capitalisme", txt: "En 1re année, tu as vu le libéralisme politique de Locke et le contrat social ; en 2e année, tu verras les bases du libéralisme économique : l’utilitarisme de Bentham et Mill et le marché d’Adam Smith." },
+      { k: "hf-capitalismo", n: 22, tit: "La critique du capitalisme : de Marx à Rawls", txt: "En 1re année, tu as vu la critique du capitalisme par Marx : lutte des classes, plus-value et aliénation ; en 2e année, tu liras comment elle se poursuit chez Gramsci, l’École de Francfort, Habermas et Rawls." },
+      { k: "hf-beauvoir", n: 26, tit: "Le féminisme contemporain : Simone de Beauvoir", txt: "En 1re année, tu as vu Beauvoir dans les vagues du féminisme et son « On ne naît pas femme : on le devient » ; en 2e année, tu liras son existentialisme en profondeur, ainsi que Butler, Fraser et Nussbaum." }
+    ],
+    "hf-antropologia": [
+      { k: "fil-t2", n: 2, tit: "Qu'est-ce que l'être humain ?", txt: "Tu as déjà vu en 1re année l’âme dans le problème corps-esprit, avec le dualisme de Platon et l’âme-forme d’Aristote ; ici, tu as lu le tournant de Socrate et les trois conceptions de la psyché." }
+    ],
+    "hf-beauvoir": [
+      { k: "fil-t6", n: 6, tit: "La vie en société (Philosophie politique)", txt: "Tu as déjà vu en 1re année Beauvoir dans les vagues du féminisme et son « On ne naît pas femme » ; ici, tu as lu son existentialisme en profondeur, ainsi que Butler, Fraser et Nussbaum." }
+    ],
+    "hf-capitalismo": [
+      { k: "fil-t6", n: 6, tit: "La vie en société (Philosophie politique)", txt: "Tu as déjà vu en 1re année la critique du capitalisme par Marx : lutte des classes, plus-value et aliénation ; ici, tu as lu sa continuation, de Gramsci et l’École de Francfort à Habermas et Rawls." }
+    ],
+    "hf-contrato": [
+      { k: "fil-t6", n: 6, tit: "La vie en société (Philosophie politique)", txt: "Tu as déjà vu en 1re année le contrat social de Hobbes, Locke et Rousseau et le droit divin ; ici, tu as lu en outre Machiavel et la séparation des pouvoirs chez Montesquieu." }
+    ],
+    "hf-etica": [
+      { k: "fil-t5", n: 5, tit: "Les questions de l'éthique", txt: "Tu as déjà vu en 1re année la vertu comme juste milieu et l’intellectualisme de Socrate ; ici, tu as lu l’éthique classique : ce que sont l’areté et l’eudaimonía pour Socrate, Platon et Aristote." }
+    ],
+    "hf-etica-deber": [
+      { k: "fil-t5", n: 5, tit: "Les questions de l'éthique", txt: "Tu as déjà vu en 1re année l’éthique formelle de Kant et l’utilitarisme de Bentham et Mill ; ici, tu as lu ce choc en profondeur : les éthiques du devoir face à celles du bonheur." }
+    ],
+    "hf-fe-razon": [
+      { k: "fil-metafisica", n: "M", tit: "La réalité : qu'y a-t-il et comment est-ce ? (Métaphysique)", txt: "Tu as déjà vu en 1re année les cinq voies de Thomas d’Aquin et la distinction essence-existence ; ici, tu as lu la synthèse de la foi et de la raison, avec Augustin, Thomas d’Aquin, Avicenne et Ockham." }
+    ],
+    "hf-helenismo": [
+      { k: "fil-t5", n: 5, tit: "Les questions de l'éthique", txt: "Tu as déjà vu en 1re année l’hédonisme d’Épicure et son ataraxie ; ici, tu as lu l’hellénisme en entier : quatre écoles qui répondent à la question de savoir comment bien vivre dans un monde incertain." }
+    ],
+    "hf-kant": [
+      { k: "fil-t3", n: 3, tit: "Que pouvons-nous connaître ?", txt: "Tu as déjà vu en 1re année le criticisme de Kant comme synthèse du rationalisme et de l’empirisme ; ici, tu as lu sa philosophie critique en profondeur : phénomène, noumène et limites de la raison." }
+    ],
+    "hf-medieval": [
+      { k: "fil-metafisica", n: "M", tit: "La réalité : qu'y a-t-il et comment est-ce ? (Métaphysique)", txt: "Tu as déjà vu en 1re année les arguments sur Dieu d’Anselme et de Thomas d’Aquin ; ici, tu as lu le Moyen Âge qui les encadre : le rapport foi-raison, ses étapes et le problème des universaux." }
+    ],
+    "hf-metafisica": [
+      { k: "fil-t2", n: 2, tit: "Qu'est-ce que l'être humain ?", txt: "Tu as déjà vu en 1re année le problème corps-esprit avec le dualisme de Descartes et le matérialisme de Hobbes ; ici, tu as lu ce débat moderne en entier, avec le monisme de Spinoza et le tournant de Locke." },
+      { k: "fil-metafisica", n: "M", tit: "La réalité : qu'y a-t-il et comment est-ce ? (Métaphysique)", txt: "Tu as déjà vu en 1re année le monisme, le dualisme et le matérialisme comme positions sur la substance ; ici, tu as lu ce débat à l’époque moderne, avec Descartes, Hobbes, Spinoza et Locke." }
+    ],
+    "hf-mito": [
+      { k: "fil-t1", n: 1, tit: "Qu’est-ce que la philosophie ?", txt: "Tu as déjà vu en 1re année le passage du mythe au logos et les traits de la pensée mythique ; ici, tu as lu la naissance de la philosophie en Ionie, qui explique la nature sans le surnaturel." }
+    ],
+    "hf-preso": [
+      { k: "fil-t1", n: 1, tit: "Qu’est-ce que la philosophie ?", txt: "Tu as déjà vu en 1re année l’arché de Thalès comme premier pas du logos ; ici, tu as parcouru les réponses des présocratiques à la question de la réalité et du principe de toutes choses." }
+    ],
+    "hf-racionalismo": [
+      { k: "fil-t3", n: 3, tit: "Que pouvons-nous connaître ?", txt: "Tu as déjà vu en 1re année le rationalisme et l’empirisme dans le tableau des sources de la connaissance ; ici, tu as lu Descartes et Hume de près : le doute, le cogito et la critique de la causalité." }
+    ],
+    "hf-utilitarismo": [
+      { k: "fil-t6", n: 6, tit: "La vie en société (Philosophie politique)", txt: "Tu as déjà vu en 1re année le libéralisme politique de Locke et le contrat social ; ici, tu as lu les bases du libéralisme économique : l’utilitarisme de Bentham et Mill et le marché d’Adam Smith." }
+    ]
+  };
+  var WEB_REPO = { fil: "aula-de-filosofia-web", hf: "historia-filosofia-web" };
+  function puentesHtml(subject, key){
+    var arr = PUENTES[key]; if (!arr || !arr.length) return "";
+    var T = coll("THEORY"), lang = (document.documentElement.lang || "es").slice(0, 2), otra = subject === "fil" ? "hf" : "fil";
+    var url = "https://mikagiuri.github.io/" + WEB_REPO[otra] + (lang === "es" ? "" : "-" + lang) + "/#teoria/";
+    return '<div class="fin-bloque fin-puentes"><h3>' + esc(t(subject === "fil" ? "puenteFil" : "puenteHf")) + '</h3>' + arr.map(function(x){
+      var lab = (otra === "hf" ? t("hfSig") + " · " : "") + (typeof x.n === "number" ? t("tema", { n: x.n }) : x.n) + " · " + x.tit;
+      var a = T && T[x.k] ? btn({ go: "teoria", arg: x.k, label: lab }) : '<a class="itin-lnk" href="' + esc(url + x.k) + '" target="_blank" rel="noopener">' + esc(lab) + ' ↗</a>';
+      return '<div class="fin-puente">' + a + '<p>' + esc(x.txt) + '</p></div>'; }).join("") + '</div>';
+  }
   function finHtml(subject, tema, key){
     var T = coll("THEORY"), teoria = items("teoria", subject, tema);
     var row = function(label, arr){ return arr.length ? '<div class="fin-row"><span class="fin-l">' + esc(label) + '</span><div class="fin-links">' + arr.map(function(x){ return btn(x); }).join("") + '</div></div>' : ""; };
@@ -364,7 +453,7 @@
     var blk = function(titulo, arr){ var inner = arr.filter(Boolean).join(""); return inner ? '<div class="fin-bloque"><h3>' + esc(titulo) + '</h3>' + inner + '</div>' : ""; };
     var amp = function(titulo, arr){ var inner = arr.filter(Boolean).join(""); return inner ? '<details class="fin-bloque fin-amp"><summary>' + esc(titulo) + '</summary>' + inner + '</details>' : ""; };
     var ampComun = [P.anexos].concat(subject === "hf" ? [P.dilemas, P.pistas] : []).concat([P.polemicas, P.comunidades, P.perseguidos, P.duelo, P.juegos, P.videos]);
-    var rowsHtml = blk(t("blEstudiar"), [P.tarjetas, P.cuestionarios, P.infografias, P.mapas, P.esquemas, P.conceptos, P.epoca, P.cronogramas]) +
+    var rowsHtml = puentesHtml(subject, key) + blk(t("blEstudiar"), [P.tarjetas, P.cuestionarios, P.infografias, P.mapas, P.esquemas, P.conceptos, P.epoca, P.cronogramas]) +
       (subject === "hf" ? blk(t("blPau"), [P.lecturas, P.comentario, P.disertaciones, P.comparativas]) : blk(t("blPensar"), [P.lecturas, P.disertaciones, P.dilemas, P.pistas, P.logica])) +
       amp(t("blAmpliar"), ampComun);
     /* tema anterior / siguiente, en el orden de la materia; desde un anexo, solo «Volver al tema» */
@@ -494,7 +583,7 @@
              presocráticos; «Filosofía · Tema 5», helenismo) va sangrado bajo su tema y NO repite la ficha «Tema N» */
           var declaraN = extra && !anexo && temaNum(T[k]) != null;
           var li = '<li' + (extra ? ' class="temas-extra"' : '') + ga + '><button type="button" data-igo="teoria" data-iarg="' + esc(k) + '">' +
-            (T[k].sigla ? '<span class="temas-n">' + esc(T[k].sigla) + '</span>' : typeof n === "number" && !anexo && !declaraN ? '<span class="temas-n">' + esc(t("tema", { n: n })) + '</span>' : '') + '<span class="temas-t">' + esc(anexo ? strip(T[k].title).replace(/^[^\s-]+ - /, "") : strip(T[k].title)) + (subject === "hf" && typeof n === "number" && !anexo && !T[k].sigla && typeof impBadge === "function" ? ' ' + impBadge("tema", n) : '') + '</span>' + (subject === "hf" && PAU_TEMAS[n] ? '<span class="temas-pau">' + esc(t("pauBadge")) + '</span>' : '') + (anexo && T[k].clase ? '<span class="temas-anexo">En classe</span>' : '') + '</button></li>';
+            (T[k].sigla ? '<span class="temas-n">' + esc(T[k].sigla) + '</span>' : typeof n === "number" && !anexo && !declaraN ? '<span class="temas-n">' + esc(t("tema", { n: n })) + '</span>' : '') + '<span class="temas-t">' + esc(anexo ? strip(T[k].title).replace(/^[^\s-]+ - /, "") : strip(T[k].title)) + (subject === "hf" && !anexo && typeof impBadge === "function" ? ' ' + impBadge("tema", typeof n === "number" && !T[k].sigla ? n : k) : '') + '</span>' + (subject === "hf" && PAU_TEMAS[n] ? '<span class="temas-pau">' + esc(t("pauBadge")) + '</span>' : '') + (anexo && T[k].clase ? '<span class="temas-anexo">En classe</span>' : '') + '</button></li>';
           if (anexo) exp.push(li);
           else { if (!extra) flush(); out += li; }
         });
