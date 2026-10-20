@@ -29,7 +29,7 @@
     cronogramas: "Chronogrammes", disertaciones: "Dissertations", comparativas: "Comparatives", polemicas: "Polémiques", comunidades: "Communautés",
     puenteFil: "Tu le reverras en 2e année de Bachillerato", puenteHf: "Tu l’as déjà vu en 1re année de Bachillerato", hfSig: "HP",
     perseguidos: "Persécutés", duelo: "Duel de raisons", juegos: "Jeux", logica: "Coin de logique",
-    videosEu: "Vidéos en basque (Ikusgela)", videoEu: "Vidéo en basque d'Ikusgela", transcripcion: "Transcription", transcripcionT: "Texte de la vidéo : sous-titres d'Ikusgela", infografia: "Infographie", mapa: "Carte", esquema: "Schéma", lectura: "Lecture", dilema: "Dilemme", comentario: "Commentaire",
+    videosEu: "Vidéos en basque (Ikusgela)", videoEu: "Vidéo en basque d’Ikusgela", transcripcion: "Transcription", transcripcionT: "Texte de la vidéo : sous-titres d’Ikusgela", infografia: "Infographie", mapa: "Carte", esquema: "Schéma", lectura: "Lecture", dilema: "Dilemme", comentario: "Commentaire",
     pau: "Parcours PAU", pauLead: "Prépare la PAU dans l’ordre : d’abord comment se déroule l’épreuve, puis chaque exercice et, à la fin, l’entraînement par thèmes.",
     pau1: "Comment se déroule l’épreuve", pau2: "Exercice 1 · Le commentaire de texte", pau3: "Exercice 2 · La dissertation",
     pau4: "Exercice 3 · L’exposé", pau5: "Comment elle est corrigée", pau6: "Entraîne-toi par thèmes", inicio: "Accueil",
