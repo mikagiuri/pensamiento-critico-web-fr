@@ -80,6 +80,7 @@
         </div>
       </div>
       
+      <button data-view="uso">Uso</button>
       <button data-view="puentes">Puentes 1.º↔2.º</button>
     </nav>
     <button class="navtoggle" id="navtoggle" aria-label="Ouvrir le menu des sections" aria-expanded="false">☰</button>
@@ -104,6 +105,22 @@
   
 
   
+
+  <section class="view" id="uso">
+    <p class="eyebrow">Registro de uso · solo web local</p>
+    <h1 class="title">Pulso de uso</h1>
+    <p class="lead">Qué consultan los grupos y dónde fallan, de forma anónima y por grupo. Esta sección no se publica en las webs del alumnado.</p>
+
+    <div class="sec-head"><h2 class="sec">Panel</h2></div>
+    <p><a class="fbtn" href="uso/pulso_de_uso.html" target="_blank" rel="noopener">Abrir el panel «Pulso de uso»</a></p>
+    <p class="lead">Si el enlace no abre nada, aún no has generado el panel. Para crearlo o actualizarlo con datos reales:</p>
+    <ol class="lead">
+      <li>En la hoja de Google del registro, exporta las pestañas <b>resumen</b> et <b>falladas</b> a CSV (Archivo › Descargar › CSV).</li>
+      <li>Desde <code>editables_lab_iesmdb</code>, ejecuta: <code>node tools/uso_panel.js --resumen resumen.csv --falladas falladas.csv --out web/uso/pulso_de_uso.html</code></li>
+      <li>Recarga esta página y pulsa «Abrir el panel».</li>
+    </ol>
+    <p class="lead">El resumen se genera cada lunes de madrugada; hasta el primero, el panel avisa de que aún no hay datos. El panel nunca muestra nombres, códigos de alumno, IP ni texto, ni ninguna celda con menos de 5 visitas.</p>
+  </section>
 
   
 
@@ -224,7 +241,10 @@
     <div class="glolist" id="glolist"></div>
   </section>
 
-  <!-- ILUSTRES -->
+  <!-- ÉTIMOS -->
+  
+
+  <!-- BIOGRAFIAS -->
   
 
   <!-- CITAS -->
@@ -435,6 +455,9 @@
         <li>Basque, 18-10-2026 (consigne du professeur : trancher les doutes de vocabulaire avec Euskaltzaindia ou Euskalterm) : « moteur immobile » se dit « motor ibilge », « premier moteur », « lehen motor », et « premier moteur immobile », « lehen motor ibilge » (<a href="https://www.euskadi.eus/euskalterm/" target="_blank" rel="noopener">Euskalterm</a>, philosophie) ; le Hiztegia ne recense que <a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=mugiezin" target="_blank" rel="noopener">mugiezin</a> et <a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=higiezin" target="_blank" rel="noopener">higiezin</a> comme adjectifs généraux. Le titre de la <em>Somme théologique</em> reste en latin, <em>Summa Theologiae</em> : il n’a pas d’entrée dans le Hiztegia ni dans Euskalterm et c’est la forme la plus employée sur le site.</li>
         <li>Basque, 20-10-2026 (explorations sur Spinoza) : « ecuanimidad » (sérénité) se dit « baretasun » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=baretasun" target="_blank" rel="noopener">baretasun</a> ; « ekuanimitate » ne figure pas dans le Hiztegia) ; l’<em>animositas</em> de Spinoza (« fermeté ») est « irmotasun » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=irmotasun" target="_blank" rel="noopener">irmotasun</a>), sa <em>generositas</em> « eskuzabaltasun » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=eskuzabaltasun" target="_blank" rel="noopener">eskuzabaltasun</a>) et la <em>fortitudo</em> (« force d’âme ») « gogo-sendotasun » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=sendotasun" target="_blank" rel="noopener">sendotasun</a>) ; « sédition » est « sedizio » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=sedizio" target="_blank" rel="noopener">sedizio</a>) et « résistance passive », « erresistentzia pasibo » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=pasibo" target="_blank" rel="noopener">pasibo</a>, sens 1). « Ciguë » reste « zikuta », la forme déjà employée sur le site, car le Hiztegia ne recense ni « zikuta » ni « ziraba ».</li>
         <li>Basque, 20-10-2026 (Nietzsche face à Spinoza) : « phtisique » se dit « hetiko » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=hetiko" target="_blank" rel="noopener">hetiko</a> : « hetikak joa ») et « exsangue », « odolgabe » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=odolgabe" target="_blank" rel="noopener">odolgabe</a> : « odolik ez duena »).</li>
+<<<<<<< HEAD
+=======
+>>>>>>> 3601810e (Exploración «La certeza sensible y la opinión: Hegel y Platón» (HF tema 21), para revisión)
       </ul>
       <!-- NOTAS-ARETE-INICIO -->
       <!-- NOTAS-ARETE-FIN -->
