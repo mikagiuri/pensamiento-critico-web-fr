@@ -1,7 +1,7 @@
 // Generado por web_i18n/i18n_rebuild.js (fr) a partir de web/js/juegosucio.js. No editar a mano: editar la memoria tm/fr.json y regenerar.
 const JUEGO_SUCIO = {
  "intro": "Arthur Schopenhauer (1788-1860) était un philosophe allemand réputé grincheux : regarde ses cheveux. Vers 1830, il a écrit un petit livre, <em>L'Art d'avoir toujours raison</em>, avec 38 « stratagèmes » : des trucs pour gagner une discussion même quand on a tort. Il ne l'a pas écrit pour que nous trichions : il disait qu'il faut les connaître pour qu'on ne nous les fasse pas. En voici 25.",
- "pista": "Les illustrations sont des caricatures et des tableaux anciens du domaine public, surtout d'Honoré Daumier, qui s'est moqué des avocats de son époque : beaucoup de ses dessins sont, littéralement, des stratagèmes de Schopenhauer. Regarde toujours ce que cherche celui qui triche : il ne veut pas savoir qui a raison, il veut gagner.",
+ "pista": "Les illustrations sont des caricatures et des tableaux anciens du domaine public, surtout d'Honoré Daumier, qui s'est moqué des avocats de son époque. Dans beaucoup d'entre elles, la blague est dans ce que disent les personnages : lis la légende. Regarde toujours ce que cherche celui qui triche : il ne veut pas savoir qui a raison, il veut gagner.",
  "retrato": "Arthur Schopenhauer, photographié par Johann Schäfer en 1859.",
  "estratagemas": [
   {
@@ -116,7 +116,7 @@ const JUEGO_SUCIO = {
    "w": 900,
    "h": 1200,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 9 (1845-1848).",
-   "pie": "« — Vous m'avez injurié dans votre plaidoirie, mais je saurai vous obliger à me donner des explications !… — Sachez, monsieur, que je ne vous crains pas… » Deux avocats se sont piqués : ils ne discutent plus de l'affaire, ils discutent entre eux.",
+   "pie": "« — Vous m'avez injurié dans votre plaidoirie, mais je saurai vous obliger à me donner des explications !… — Sachez, monsieur, que je ne vous crains pas… et que j'ai le courage civique de ne jamais répondre à une provocation ! » Un monsieur de la rue met le doigt sous le menton de l'avocat pour le piquer. L'avocat ne mord pas à l'hameçon : c'est ainsi qu'on contre ce stratagème.",
    "defensa": "Respire et reviens au sujet : le fait que tu sois fâché ne rend pas vrai ce que dit l'autre."
   },
   {
@@ -300,7 +300,7 @@ const JUEGO_SUCIO = {
    "w": 900,
    "h": 796,
    "obra": "William Hogarth, <em>La Carrière d'un libertin</em>, planche 4 (1735).",
-   "pie": "Hogarth a raconté en huit gravures la chute d'un jeune homme qui hérite d'une fortune : fêtes, dettes, prison et asile d'aliénés. Dans cette planche, on l'arrête pour dettes. La pente glissante présente ainsi n'importe quel premier pas : comme s'il menait inévitablement au dernier.",
+   "pie": "Hogarth a raconté en huit gravures la chute d'un jeune homme qui hérite d'une fortune : fêtes, dettes, prison et asile d'aliénés. Voici la quatrième planche : on l'arrête pour dettes (à droite, près de la chaise à porteurs). La pente glissante présente ainsi n'importe quel premier pas : comme s'il menait inévitablement au dernier.",
    "defensa": "Demande pour chaque pas : « Pourquoi cela devrait-il arriver ? »"
   },
   {
@@ -369,7 +369,7 @@ const JUEGO_SUCIO = {
    "w": 900,
    "h": 1006,
    "obra": "William Hogarth, <em>Le Public riant</em> (1733). National Gallery of Art, Washington.",
-   "pie": "Le public d'un théâtre se tord de rire ; seuls les musiciens de l'orchestre, devant, restent sérieux. Quand les gens rient, on dirait que la blague a gagné la discussion.",
+   "pie": "Le public d'un théâtre se tord de rire ; seuls les musiciens de l'orchestre, au rang du bas, restent sérieux. Quand les gens rient, on dirait que la blague a gagné la discussion.",
    "defensa": "Attends que les rires passent et reviens à ton argument : une blague n'est pas une raison."
   },
   {
@@ -392,7 +392,7 @@ const JUEGO_SUCIO = {
    "w": 900,
    "h": 683,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 30 (1845-1848).",
-   "pie": "« L'avocat qui s'évanouit : dernier recours quand la cause est très malade. » Si tout le monde regarde la personne évanouie, personne ne regarde les preuves.",
+   "pie": "« L'avocat qui s'évanouit : dernier recours quand la cause est très malade. » Tout le monde se presse autour de la personne évanouie, au point qu'on ne la voit même pas. Si tout le monde regarde la personne évanouie, personne ne regarde les preuves.",
    "defensa": "« On en parlera plus tard. Maintenant, on parlait de… »"
   },
   {
@@ -457,11 +457,6 @@ const JUEGO_SUCIO = {
      "t": "C'est un truc de grands-parents !"
     }
    ],
-   "img": "media/juegosucio/etiqueta.jpg",
-   "w": 900,
-   "h": 1100,
-   "obra": "Honoré Daumier, <em>Les Bas-bleus</em> (1844).",
-   "pie": "« <em>Bas-bleu</em> » était l'étiquette avec laquelle on ridiculisait les femmes qui écrivaient, et Daumier lui a consacré toute une série. Avec une telle étiquette, il n'est plus nécessaire d'écouter ce que quelqu'un dit.",
    "defensa": "L'étiquette n'est pas une raison : « Et qu'est-ce qu'il y a de mal à ça ? »"
   },
   {
@@ -484,7 +479,7 @@ const JUEGO_SUCIO = {
    "w": 900,
    "h": 1114,
    "obra": "Honoré Daumier, <em>Recherche infructueuse de la planète Le Verrier</em> (1846). National Gallery of Art, Washington.",
-   "pie": "En 1846, l'astronome Le Verrier a calculé sur le papier où devait se trouver une nouvelle planète, Neptune, et on l'a trouvée aussitôt. Ce couple ne la voit pas avec sa longue-vue : en théorie elle y est, mais en pratique, rien.",
+   "pie": "En 1846, l'astronome Le Verrier a calculé sur le papier où devait se trouver une nouvelle planète, Neptune, et avec un télescope on l'a trouvée aussitôt. Ce couple la cherche à l'œil nu, parapluie à la main, et ne voit rien : « en théorie elle y est, mais en pratique, rien ». La théorie avait raison ; ce qui clochait, c'était leur façon de regarder.",
    "defensa": "Demande ce qui échoue exactement en pratique : soit il y a un défaut précis, soit c'est une excuse."
   },
   {
