@@ -205,7 +205,8 @@
     if (hereIdx < 0 && here.go) pasos.forEach(function(p, i){ if (hereIdx < 0 && p.id === here.go) hereIdx = i; });
     return hereIdx;
   }
-  function btn(x, cls){ return '<button class="' + (cls || "itin-lnk") + '" type="button" data-igo="' + esc(x.go) + '" data-iarg="' + esc(x.arg) + '">' + esc(x.label) + (x.size ? ' <i>' + esc(x.size) + '</i>' : '') + '</button>'; }
+  function btn(x, cls){ if (x.href) return '<a class="' + (cls || "itin-lnk") + '" href="' + esc(x.href) + '">' + esc(x.label) + '</a>';   /* (22-10) enlace profundo (#vista/arg) */
+    return '<button class="' + (cls || "itin-lnk") + '" type="button" data-igo="' + esc(x.go) + '" data-iarg="' + esc(x.arg) + '">' + esc(x.label) + (x.size ? ' <i>' + esc(x.size) + '</i>' : '') + '</button>'; }
   /* Tira de UNA línea «De este tema» (Tarjetas, Cuestionarios, Clases): un enlace por paso o por tipo de repaso. */
   function stripHtml(pasos, here, extra){
     var hereIdx = hereIndex(pasos, here), out = [];
@@ -306,7 +307,14 @@
   }
   /* rótulo de una sección tal como lo pone el menú (ya traducido); si no está en el menú, el de TXT */
   function navLabel(v, k){ var b = document.querySelector('#tabs [data-view="' + v + '"]'); return b ? strip(b.textContent) : t(k || v); }
-  function logicaDe(subject, tema){ return subject === "fil" && tema === 4 && view("logica") ? [{ go: "logica", arg: "portada", label: navLabel("logica", "logica") }] : []; }
+  /* (22-10, curar_webs lote 2) en HF el Rincón de lógica no está en el menú (opción A del profesor, docs/36): solo lo enlazan
+     los temas que lo necesitan, y a la mesa o pestaña concreta (enlace profundo): los juicios de Kant (T19) y los silogismos (AA). */
+  var LOGICA_HF = { "hf-kant": ["kant", "Les jugements de Kant"], "hf-aa": ["silogismos", "Syllogismes"] };
+  function logicaDe(subject, tema, key){
+    if (!view("logica")) return [];
+    if (subject === "fil") return tema === 4 ? [{ go: "logica", arg: "portada", label: navLabel("logica", "logica") }] : [];
+    var l = LOGICA_HF[key]; return l ? [{ href: "#logica/" + l[0], label: l[1] }] : [];
+  }
   /* polémicas, comunidades y perseguidos declaran sus temas (claves de THEORY) en «temas» */
   function porTemas(name, go_, teoriaKeys, label){
     var A = G(name); if (!Array.isArray(A) || !view(go_) || !teoriaKeys.length) return [];
@@ -331,7 +339,8 @@
     "fil-metafisica": [
       { k: "hf-medieval", n: 11, tit: "La philosophie médiévale : étapes, méthodes et problème des universaux", txt: "En 1re année, tu as vu les arguments médiévaux sur Dieu, d’Anselme et de Thomas d’Aquin ; en 2e année, tu verras tout le Moyen Âge : le rapport foi-raison, ses étapes et le problème des universaux." },
       { k: "hf-fe-razon", n: 12, tit: "Foi et raison : l'assimilation de la philosophie grecque et l'existence de Dieu", txt: "En 1re année, tu as vu les cinq voies de Thomas d’Aquin et la distinction essence-existence ; en 2e année, tu verras comment le christianisme a assimilé la philosophie grecque, avec Augustin, Thomas d’Aquin, Avicenne et Ockham." },
-      { k: "hf-metafisica", n: 15, tit: "Le débat métaphysique moderne : dualisme et matérialisme", txt: "En 1re année, tu as vu le monisme, le dualisme et le matérialisme comme réponses sur la substance ; en 2e année, tu verras ce débat à l’époque moderne, avec Descartes, Hobbes, Spinoza et Locke." }
+      { k: "hf-metafisica", n: 15, tit: "Le débat métaphysique moderne : dualisme et matérialisme", txt: "En 1re année, tu as vu le monisme, le dualisme et le matérialisme comme réponses sur la substance ; en 2e année, tu verras ce débat à l’époque moderne, avec Descartes, Hobbes, Spinoza et Locke." },
+      { k: "hf-aa", n: "AA", tit: "Aristote : le système complet", txt: "En 1re année, tu as vu la substance d’Aristote, l’essence et le passage de la puissance à l’acte comme sa réponse à Parménide ; en 2e année, tu verras son système complet : les catégories, les quatre causes et la téléologie." }
     ],
     "fil-t1": [
       { k: "hf-mito", n: 3, tit: "La naissance de la philosophie : du mythe au logos", txt: "En 1re année, tu as vu le passage du mythe au logos comme naissance de la philosophie ; en 2e année, tu liras les premiers philosophes de Milet expliquant la réalité par la raison, sans dieux." },
@@ -340,29 +349,43 @@
     "fil-t2": [
       { k: "hf-antropologia", n: 7, tit: "L'anthropologie classique : Socrate, Platon et Aristote", txt: "En 1re année, tu as vu l’âme dans le problème corps-esprit, avec Platon et Aristote ; en 2e année, tu liras le tournant de Socrate et les trois conceptions de la psyché : âme, vertu et vie bonne." },
       { k: "hf-metafisica", n: 15, tit: "Le débat métaphysique moderne : dualisme et matérialisme", txt: "En 1re année, tu as vu le dualisme de Descartes et le matérialisme de Hobbes ; en 2e année, tu verras ce débat moderne en entier, avec le monisme de Spinoza et le tournant empiriste de Locke." },
-      { k: "hf-sospecha", n: 21, tit: "Les philosophes du soupçon : Marx, Nietzsche et Freud", txt: "En 1re année, tu as vu Marx, Nietzsche et Freud parmi les conceptions de l’être humain — le travail, le surhomme et un moi qui « n’est pas maître dans sa propre maison » — ; en 2e année, tu les verras ensemble comme les « maîtres du soupçon », qui mettent en crise l’idée d’un sujet maître de lui-même." }
+      { k: "hf-sospecha", n: 21, tit: "Les philosophes du soupçon : Marx, Nietzsche et Freud", txt: "En 1re année, tu as vu Marx, Nietzsche et Freud parmi les conceptions de l’être humain — le travail, le surhomme et un moi qui « n’est pas maître dans sa propre maison » — ; en 2e année, tu les verras ensemble comme les « maîtres du soupçon », qui mettent en crise l’idée d’un sujet maître de lui-même." },
+      { k: "hf-existencialismo", n: 25, tit: "L'existentialisme : Heidegger, Sartre et la philosophie espagnole", txt: "En 1re année, tu as vu l’existentialisme de Sartre et de Beauvoir : « l’existence précède l’essence » ; en 2e année, tu l’étudieras avec Kierkegaard, Heidegger et Camus, ainsi qu’avec Unamuno, Ortega et María Zambrano." }
     ],
     "fil-t3": [
       { k: "hf-racionalismo", n: 14, tit: "Rationalisme et empirisme : Descartes et Hume", txt: "En 1re année de Bachillerato, tu as vu le rationalisme et l’empirisme comme deux sources opposées de la connaissance ; en 2e année, tu liras Descartes et Hume de près : le doute méthodique, le cogito et la critique de la causalité." },
       { k: "hf-kant", n: 19, tit: "La philosophie critique de Kant et le problème de la métaphysique", txt: "En 1re année, tu as vu le criticisme de Kant unir raison et expérience ; en 2e année, tu verras comment l’espace, le temps et les catégories ordonnent l’expérience et pourquoi nous ne connaissons pas les choses « en soi »." },
       { k: "hf-sofistas", n: 5, tit: "Les Lumières grecques : les sophistes, Socrate et Aspasie", txt: "En 1re année, tu as vu le relativisme de Protagoras — « l’homme est la mesure de toute chose » — parmi les positions face à la vérité ; en 2e année, tu verras les sophistes et le tournant anthropologique des Lumières grecques, avec Socrate et Aspasie." },
       { k: "hf-platon", n: 6, tit: "Platon : la théorie des Idées et la République", txt: "En 1re année, tu as vu la distinction de Platon entre opinion (doxa) et science (episteme) et son idéalisme des Idées ; en 2e année, tu liras toute sa théorie des Idées et la cité juste de la République." },
-      { k: "hf-modernidad", n: 13, tit: "La naissance de la modernité : Renaissance, protestantisme et révolution scientifique", txt: "En 1re année, tu as vu la révolution scientifique de Galilée et la méthode hypothético-déductive, et comment l’idée de science et de cosmos a changé ; en 2e année, tu verras cette révolution au sein de la naissance de la modernité, avec la Renaissance et la Réforme." }
+      { k: "hf-modernidad", n: 13, tit: "La naissance de la modernité : Renaissance, protestantisme et révolution scientifique", txt: "En 1re année, tu as appris la méthode hypothético-déductive et vu comment la révolution scientifique a changé l’idée de science et de cosmos ; en 2e année, tu verras d’où vient cette méthode : Galilée unit la raison et l’expérience et lit la nature en langage mathématique, un tournant qui ouvre la modernité et prépare le rationalisme de Descartes (thème 14)." },
+      { k: "hf-existencialismo", n: 25, tit: "L'existentialisme : Heidegger, Sartre et la philosophie espagnole", txt: "En 1re année, tu as vu le perspectivisme d’Ortega y Gasset : « je suis moi et ma circonstance » ; en 2e année, tu le verras aux côtés des existentialistes, avec Unamuno et María Zambrano." }
+    ],
+    "fil-t4": [
+      { k: "hf-analitica", n: 24, tit: "La philosophie analytique : Wittgenstein et le tournant linguistique", txt: "En 1re année, tu as vu la logique symbolique de Frege et de Russell, qui traduit le langage en formules ; en 2e année, tu verras comment Russell et le premier Wittgenstein se servent de cette analyse logique pour chercher un langage parfait : c’est le tournant linguistique de la philosophie analytique." }
     ],
     "fil-t5": [
       { k: "hf-etica", n: 8, tit: "L'éthique classique : intellectualisme, vertus et eudaimonia", txt: "En 1re année, tu as vu la vertu comme juste milieu et l’intellectualisme de Socrate ; en 2e année, tu liras toute l’éthique classique : l’areté, l’eudaimonía et les réponses de Socrate, Platon et Aristote." },
       { k: "hf-helenismo", n: 10, tit: "L'hellénisme : cynisme, stoïcisme, épicurisme et scepticisme", txt: "En 1re année, tu as vu l’hédonisme d’Épicure comme une éthique du bonheur ; en 2e année, tu verras l’hellénisme en entier : cynisme, stoïcisme, épicurisme et scepticisme répondant à la question de savoir comment vivre dans un monde incertain." },
       { k: "hf-etica-deber", n: 20, tit: "Éthiques du bonheur et éthiques du devoir : Kant face à l'utilitarisme", txt: "En 1re année, tu as vu l’éthique formelle de Kant et l’utilitarisme de Bentham et Mill ; en 2e année, tu liras ce choc en profondeur : les éthiques du devoir face à celles du bonheur." },
-      { k: "hf-sofistas", n: 5, tit: "Les Lumières grecques : les sophistes, Socrate et Aspasie", txt: "En 1re année, tu as vu l’intellectualisme moral de Socrate, pour qui nul ne fait le mal sciemment ; en 2e année, tu le verras dans son contexte historique : l’Athènes démocratique des sophistes, de Socrate et d’Aspasie." }
+      { k: "hf-sospecha", n: 21, tit: "Les philosophes du soupçon : Marx, Nietzsche et Freud", txt: "En 1re année, tu as vu la généalogie de la morale de Nietzsche : maîtres et esclaves, le ressentiment et la transvaluation des valeurs ; en 2e année, tu le liras en profondeur avec Marx et Freud, et avec son texte de la PAU, Ecce homo." },
+      { k: "hf-utilitarismo", n: 17, tit: "Utilitarisme et libéralisme : les bases du capitalisme", txt: "En 1re année, tu as vu l’utilitarisme de Bentham et Mill comme éthique : le plus grand bonheur pour le plus grand nombre et les plaisirs supérieurs ; en 2e année, tu le verras comme base du libéralisme, avec le principe du préjudice de Mill et le marché d’Adam Smith." }
     ],
     "fil-t6": [
       { k: "hf-contrato", n: 16, tit: "L'origine de la société et du pouvoir : Machiavel et le contrat social", txt: "En 1re année, tu as vu le contrat social de Hobbes, Locke et Rousseau comme origine de l’État ; en 2e année, tu liras en outre Machiavel et l’idée de Montesquieu de limiter le pouvoir." },
-      { k: "hf-utilitarismo", n: 17, tit: "Utilitarisme et libéralisme : les bases du capitalisme", txt: "En 1re année, tu as vu le libéralisme politique de Locke et le contrat social ; en 2e année, tu verras les bases du libéralisme économique : l’utilitarisme de Bentham et Mill et le marché d’Adam Smith." },
       { k: "hf-capitalismo", n: 22, tit: "La critique du capitalisme : de Marx à Rawls", txt: "En 1re année, tu as vu la critique du capitalisme par Marx : lutte des classes, plus-value et aliénation ; en 2e année, tu liras comment elle se poursuit chez Gramsci, l’École de Francfort, Habermas et Rawls." },
       { k: "hf-beauvoir", n: 26, tit: "Le féminisme contemporain : Simone de Beauvoir", txt: "En 1re année, tu as vu Beauvoir dans les vagues du féminisme et son « On ne naît pas femme : on le devient » ; en 2e année, tu liras son existentialisme en profondeur, ainsi que Butler, Fraser et Nussbaum." },
-      { k: "hf-platon", n: 6, tit: "Platon : la théorie des Idées et la République", txt: "En 1re année, tu as vu la République de Platon comme la première grande utopie, la cité juste des philosophes-rois ; en 2e année, tu la liras en profondeur, liée à sa théorie de l’âme et des Idées." },
-      { k: "hf-politica", n: 9, tit: "La politique classique : Platon et Aristote", txt: "En 1re année, tu as vu Aristote définir l’être humain comme animal politique et la cité juste de la République ; en 2e année, tu compareras en profondeur les deux grands modèles politiques de Platon et d’Aristote." },
+      { k: "hf-politica", n: 9, tit: "La politique classique : Platon et Aristote", txt: "En 1.º viste la República de Platón como la primera gran utopía, la ciudad justa de los filósofos-reyes, y a Aristóteles definir al ser humano como animal político; en 2.º leerás la República a fondo (tema 6) y compararás los dos modelos políticos de Platón y Aristóteles." },
       { k: "hf-ilustracion", n: 18, tit: "Le projet des Lumières : puissance et limites de la raison", txt: "En 1re année, tu as vu les droits de l’homme, le contrat social et la première vague féministe d’Olympe de Gouges et de Wollstonecraft ; en 2e année, tu verras le projet des Lumières d’où naissent ces droits et cette critique : la confiance en la raison et ses limites." }
+    ],
+    "hf-aa": [
+      { k: "fil-metafisica", n: "M", tit: "La réalité : qu'y a-t-il et comment est-ce ? (Métaphysique)", txt: "Tu as déjà vu en 1re année la substance, l’essence et le passage de la puissance à l’acte ; ici, tu as étudié le système complet d’Aristote : les catégories, les quatre causes et la téléologie." }
+    ],
+    "hf-analitica": [
+      { k: "fil-t4", n: 4, tit: "Logique et argumentation", txt: "Tu as déjà vu en 1re année la logique symbolique de Frege et de Russell ; ici, tu as vu comment cette analyse logique du langage donne naissance au tournant linguistique de Russell et de Wittgenstein." }
+    ],
+    "hf-existencialismo": [
+      { k: "fil-t2", n: 2, tit: "Qu'est-ce que l'être humain ?", txt: "Tu as déjà vu en 1re année l’existentialisme de Sartre et de Beauvoir : « l’existence précède l’essence » ; ici, tu l’as étudié avec Kierkegaard, Heidegger et Camus." },
+      { k: "fil-t3", n: 3, tit: "Que pouvons-nous connaître ?", txt: "Tu as déjà vu en 1re année le perspectivisme d’Ortega y Gasset : « je suis moi et ma circonstance » ; ici, tu l’as lu aux côtés des existentialistes, avec Unamuno et María Zambrano." }
     ],
     "hf-antropologia": [
       { k: "fil-t2", n: 2, tit: "Qu'est-ce que l'être humain ?", txt: "Tu as déjà vu en 1re année l’âme dans le problème corps-esprit, avec le dualisme de Platon et l’âme-forme d’Aristote ; ici, tu as lu le tournant de Socrate et les trois conceptions de la psyché." }
@@ -421,14 +444,14 @@
       { k: "fil-t3", n: 3, tit: "Que pouvons-nous connaître ?", txt: "Tu as déjà vu en 1re année le rationalisme et l’empirisme dans le tableau des sources de la connaissance ; ici, tu as lu Descartes et Hume de près : le doute, le cogito et la critique de la causalité." }
     ],
     "hf-sofistas": [
-      { k: "fil-t3", n: 3, tit: "Que pouvons-nous connaître ?", txt: "Tu as déjà vu en 1re année le relativisme de Protagoras — « l’homme est la mesure de toute chose » — parmi les positions face à la vérité ; ici, tu l’as situé dans son monde : les Lumières grecques et le tournant des sophistes vers l’être humain et la polis." },
-      { k: "fil-t5", n: 5, tit: "Les questions de l'éthique", txt: "Tu as déjà vu en 1re année l’intellectualisme moral de Socrate, pour qui nul ne fait le mal sciemment ; ici, tu as connu le Socrate qui l’a défendu, face aux sophistes, dans l’Athènes démocratique." }
+      { k: "fil-t3", n: 3, tit: "Que pouvons-nous connaître ?", txt: "Tu as déjà vu en 1re année le relativisme de Protagoras — « l’homme est la mesure de toute chose » — parmi les positions face à la vérité ; ici, tu l’as situé dans son monde : les Lumières grecques et le tournant des sophistes vers l’être humain et la polis." }
     ],
     "hf-sospecha": [
-      { k: "fil-t2", n: 2, tit: "Qu'est-ce que l'être humain ?", txt: "Tu as déjà vu en 1re année Marx, Nietzsche et Freud parmi les conceptions de l’être humain — le travail, le surhomme et un moi qui « n’est pas maître dans sa propre maison » — ; ici, tu les as lus ensemble comme les maîtres du soupçon." }
+      { k: "fil-t2", n: 2, tit: "Qu'est-ce que l'être humain ?", txt: "Tu as déjà vu en 1re année Marx, Nietzsche et Freud parmi les conceptions de l’être humain — le travail, le surhomme et un moi qui « n’est pas maître dans sa propre maison » — ; ici, tu les as lus ensemble comme les maîtres du soupçon." },
+      { k: "fil-t5", n: 5, tit: "Les questions de l'éthique", txt: "Tu as déjà vu en 1re année la généalogie de la morale de Nietzsche : maîtres et esclaves, le ressentiment et la transvaluation ; ici, tu l’as lu en profondeur, avec son texte de la PAU." }
     ],
     "hf-utilitarismo": [
-      { k: "fil-t6", n: 6, tit: "La vie en société (Philosophie politique)", txt: "Tu as déjà vu en 1re année le libéralisme politique de Locke et le contrat social ; ici, tu as lu les bases du libéralisme économique : l’utilitarisme de Bentham et Mill et le marché d’Adam Smith." }
+      { k: "fil-t5", n: 5, tit: "Les questions de l'éthique", txt: "Tu as déjà vu en 1re année l’utilitarisme de Bentham et Mill comme éthique : le plus grand bonheur pour le plus grand nombre et les plaisirs supérieurs ; ici, tu l’as lu comme base du libéralisme, avec le principe du préjudice de Mill et le marché d’Adam Smith." }
     ]
   };
   var WEB_REPO = { fil: "aula-de-filosofia-web", hf: "historia-filosofia-web" };
@@ -472,7 +495,7 @@
     P.cronogramas = row(t("cronogramas"), cronosDe(subject, tema));
     P.disertaciones = row(t("disertaciones"), disertDe(subject, tema));
     P.comparativas = row(t("comparativas"), comparativasDe(subject, tema));
-    P.logica = row(t("logica"), logicaDe(subject, tema));
+    P.logica = row(t("logica"), logicaDe(subject, tema, key));
     P.polemicas = rowFold(t("polemicas"), pols);
     P.comunidades = rowFold(t("comunidades"), porTemas("COMUNIDADES", "comunidades", tk, function(c){ return strip(c.nombre); }));
     P.perseguidos = rowFold(t("perseguidos"), porTemas("PERSEGUIDOS", "perseguidos", tk, function(c){ return strip(c.nombre); }));
@@ -481,7 +504,7 @@
     /* (12-10, rediseño Lote 3) la caja del final del tema se ordena en TRES bloques en TODOS los temas */
     var blk = function(titulo, arr){ var inner = arr.filter(Boolean).join(""); return inner ? '<div class="fin-bloque"><h3>' + esc(titulo) + '</h3>' + inner + '</div>' : ""; };
     var amp = function(titulo, arr){ var inner = arr.filter(Boolean).join(""); return inner ? '<details class="fin-bloque fin-amp"><summary>' + esc(titulo) + '</summary>' + inner + '</details>' : ""; };
-    var ampComun = [P.anexos].concat(subject === "hf" ? [P.dilemas, P.pistas] : []).concat([P.polemicas, P.comunidades, P.perseguidos, P.duelo, P.juegos, P.videos]);
+    var ampComun = [P.anexos].concat(subject === "hf" ? [P.dilemas, P.pistas, P.logica] : [])   /* (22-10) en HF, la lógica va en «Ampliar» */.concat([P.polemicas, P.comunidades, P.perseguidos, P.duelo, P.juegos, P.videos]);
     var rowsHtml = puentesHtml(subject, key) + blk(t("blEstudiar"), [P.tarjetas, P.cuestionarios, P.infografias, P.mapas, P.esquemas, P.conceptos, P.epoca, P.cronogramas]) +
       (subject === "hf" ? blk(t("blPau"), [P.lecturas, P.comentario, P.disertaciones, P.comparativas]) : blk(t("blPensar"), [P.lecturas, P.disertaciones, P.dilemas, P.pistas, P.logica])) +
       amp(t("blAmpliar"), ampComun);
