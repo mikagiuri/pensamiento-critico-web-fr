@@ -20,7 +20,7 @@ const PIS_TXT = {
   comprobacion: "Vérification", pregunta: "Question", logrado: "Compréhension atteinte", completado: "Parcours terminé",
   sinAyuda: "Tu l’as résolu sans indices.", usaste: "Indices utilisés : {n}.", repetir: "Le refaire", siguiente: "Question suivante :",
   pisN: "Indice {n}", revelar: "Clique pour révéler", preguntas: "Questions",
-  enGlosario: "Dans le glossaire", abrirGlo: "Ouvrir dans le glossaire ›",
+  enGlosario: "Dans le dictionnaire", abrirGlo: "Ouvrir dans le dictionnaire ›",
   seguir: "Réessayer",
   intentoLb: "Avant de voir l'explication", intentoTxt: "Écris ta réponse avec tes mots, même si tu n'es pas sûr. Ensuite, tu la compareras avec l'explication.",
   intentoGuarda: "Ce que tu écris est enregistré uniquement dans ce navigateur.", intentoPal: "{n} mots (minimum {m})", intentoVer: "Voir l'explication et comparer",

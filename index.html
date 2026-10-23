@@ -50,7 +50,7 @@
           <button data-view="tarjetas">Cartes</button>
           <button data-view="reto">Défi</button>
           <button data-view="parejas">Paires</button>
-          <button data-view="glosario">Glossaire</button>
+          <button data-view="glosario">Dictionnaire</button>
         </div>
       </div>
       
@@ -213,9 +213,9 @@
   <!-- GLOSARIO -->
   <section class="view" id="glosario">
     <p class="eyebrow">Référence</p>
-    <h1 class="title">Glossaire</h1>
-    <p class="lead">Dictionnaire de la matière : <strong>301 termes</strong> d’Histoire de la philosophie avec leur définition, tirés du manuel du département. Cherche par mot ou filtre par <strong>bloc</strong> et par <strong>domaine</strong>.</p>
-    <div class="filterbar" id="glofilter" role="group" aria-label="Filtrer le glossaire"></div>
+    <h1 class="title">Dictionnaire</h1>
+    <p class="lead">Dictionnaire de la matière : les <strong>termes</strong> de Pensée critique avec leur définition, tirés des cours de l’année. Cherche par mot ou filtre par <strong>domaine</strong>.</p>
+    <div class="filterbar" id="glofilter" role="group" aria-label="Filtrer le dictionnaire"></div>
     <div class="glocount" id="glocount"></div>
     <div class="glolist" id="glolist"></div>
   </section>
@@ -307,7 +307,7 @@
   <section class="view" id="parejas">
     <p class="eyebrow">Outil</p>
     <h1 class="title">Paires</h1>
-    <p class="lead">Associe chaque terme du glossaire à sa définition, contre la montre. Accumule des points et une série ; ton meilleur score est enregistré dans ce navigateur.</p>
+    <p class="lead">Associe chaque terme du dictionnaire à sa définition, contre la montre. Accumule des points et une série ; ton meilleur score est enregistré dans ce navigateur.</p>
     <div id="parbox"></div>
   </section>
 
@@ -438,6 +438,7 @@
         <li>Basque, 18-10-2026 (consigne du professeur : trancher les doutes de vocabulaire avec Euskaltzaindia ou Euskalterm) : « moteur immobile » se dit « motor ibilge », « premier moteur », « lehen motor », et « premier moteur immobile », « lehen motor ibilge » (<a href="https://www.euskadi.eus/euskalterm/" target="_blank" rel="noopener">Euskalterm</a>, philosophie) ; le Hiztegia ne recense que <a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=mugiezin" target="_blank" rel="noopener">mugiezin</a> et <a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=higiezin" target="_blank" rel="noopener">higiezin</a> comme adjectifs généraux. Le titre de la <em>Somme théologique</em> reste en latin, <em>Summa Theologiae</em> : il n’a pas d’entrée dans le Hiztegia ni dans Euskalterm et c’est la forme la plus employée sur le site.</li>
         <li>Basque, 20-10-2026 (explorations sur Spinoza) : « ecuanimidad » (sérénité) se dit « baretasun » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=baretasun" target="_blank" rel="noopener">baretasun</a> ; « ekuanimitate » ne figure pas dans le Hiztegia) ; l’<em>animositas</em> de Spinoza (« fermeté ») est « irmotasun » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=irmotasun" target="_blank" rel="noopener">irmotasun</a>), sa <em>generositas</em> « eskuzabaltasun » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=eskuzabaltasun" target="_blank" rel="noopener">eskuzabaltasun</a>) et la <em>fortitudo</em> (« force d’âme ») « gogo-sendotasun » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=sendotasun" target="_blank" rel="noopener">sendotasun</a>) ; « sédition » est « sedizio » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=sedizio" target="_blank" rel="noopener">sedizio</a>) et « résistance passive », « erresistentzia pasibo » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=pasibo" target="_blank" rel="noopener">pasibo</a>, sens 1). « Ciguë » reste « zikuta », la forme déjà employée sur le site, car le Hiztegia ne recense ni « zikuta » ni « ziraba ».</li>
         <li>Basque, 20-10-2026 (Nietzsche face à Spinoza) : « phtisique » se dit « hetiko » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=hetiko" target="_blank" rel="noopener">hetiko</a> : « hetikak joa ») et « exsangue », « odolgabe » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=odolgabe" target="_blank" rel="noopener">odolgabe</a> : « odolik ez duena »).</li>
+        <li>Basque, 23-10-2026 (nom de la section) : le « Glosario » s’appelle désormais « Diccionario », et en basque « Hiztegia » (<a href="https://www.euskaltzaindia.eus/index.php?option=com_hiztegianbilatu&amp;task=bilaketa&amp;Itemid=1693&amp;lang=eu&amp;query=hiztegi" target="_blank" rel="noopener">hiztegi</a>, sens 1 : recueil classé de mots avec leur définition ; Euskaltzaindia admet aussi « glosario », mais « hiztegi » est le mot courant). En français, « Dictionnaire » ; en anglais, « Dictionary » ; en arabe, « القاموس ».</li>
       </ul>
       <!-- NOTAS-ARETE-INICIO -->
       <!-- NOTAS-ARETE-FIN -->

@@ -49,7 +49,7 @@
     esquemas: "loadEsq", pau: "loadPau", mapas: "loadMap"
   };
   /* orden de los grupos en los resultados */
-  var ORDER = ["Section", "Théorie", "Partie", "Glossaire", "Lecture", "Passage", "Citation", "Question", "Carte", "Schéma", "Support", "Histoire", "Infographie", "Quiz", "Cartes", "PAU", "Biographie", "Clase"];
+  var ORDER = ["Section", "Théorie", "Partie", "Dictionnaire", "Lecture", "Passage", "Citation", "Question", "Carte", "Schéma", "Support", "Histoire", "Infographie", "Quiz", "Cartes", "PAU", "Biographie", "Clase"];
 
   var index = null;
   /* entrada: { type, label, meta, go, arg, text (fragmento original donde buscar), hay (fold de label+meta+clave),
@@ -125,7 +125,7 @@
     });
     /* glosario: término + definición (+ raíz) */
     if (typeof GLOSARIO !== "undefined" && GLOSARIO) GLOSARIO.forEach(function(g){
-      add(out, { type: "Glossaire", label: g.t, meta: (g.area || "") + (g.tema ? " · " + g.tema : ""), go: "glosario", arg: null, glo: g, text: strip((g.def || "") + (g.et ? " · " + g.et : "")) });
+      add(out, { type: "Dictionnaire", label: g.t, meta: (g.area || "") + (g.tema ? " · " + g.tema : ""), go: "glosario", arg: null, glo: g, text: strip((g.def || "") + (g.et ? " · " + g.et : "")) });
     });
     /* lecturas: por párrafo (o bloque), agrupando los muy cortos */
     if (LE) Object.keys(LE).forEach(function(k){
@@ -188,7 +188,7 @@
       else if (e.hay.indexOf(nq) >= 0) score -= 30;
       else if (e.body.indexOf(nq) >= 0) score -= 20;   /* la frase entera, en el texto */
       if (e.type === "Section") score -= 5;
-      if (e.type === "Glossaire") score -= 10;
+      if (e.type === "Dictionnaire") score -= 10;
       score += Math.min(10, Math.floor((e.text || "").length / 400));   /* a igualdad, el fragmento corto */
       res.push({ e: e, score: score });
     });
@@ -264,7 +264,7 @@
     ov.innerHTML =
       '<div class="search-box">' +
         '<input id="searchinput" type="search" autocomplete="off" spellcheck="false" ' +
-          'placeholder="Chercher dans toute la salle : théorie, glossaire, lectures, questions, citations…" aria-label="Chercher dans la salle">' +
+          'placeholder="Chercher dans toute la salle : théorie, dictionnaire, lectures, questions, citations…" aria-label="Chercher dans la salle">' +
         '<div class="search-count" id="searchcount"></div>' +
         '<ul id="searchresults" class="search-res" role="listbox" aria-label="Résultats"></ul>' +
         '<div class="search-hint">↑↓ se déplacer · ↵ ouvrir · esc fermer</div>' +
