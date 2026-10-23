@@ -383,7 +383,9 @@
       { k: "hf-existencialismo", n: 25, tit: "L'existentialisme : Heidegger, Sartre et la philosophie espagnole", txt: "En 1re année, tu as vu le perspectivisme d’Ortega y Gasset : « je suis moi et ma circonstance » ; en 2e année, tu le verras aux côtés des existentialistes, avec Unamuno et María Zambrano." }
     ],
     "fil-t4": [
-      { k: "hf-analitica", n: 24, tit: "La philosophie analytique : Wittgenstein et le tournant linguistique", txt: "En 1re année, tu as vu la logique symbolique de Frege et de Russell, qui traduit le langage en formules ; en 2e année, tu verras comment Russell et le premier Wittgenstein se servent de cette analyse logique pour chercher un langage parfait : c’est le tournant linguistique de la philosophie analytique." }
+      { k: "hf-aa", n: "AA", tit: "Aristote : le système complet", txt: "En 1.º viste los silogismos y el cuadrado de oposición (en el Rincón de lógica); en 2.º verás la lógica dentro del sistema de Aristóteles: el Órganon, la clasificación de las ciencias, las categorías y cómo la teoría del silogismo se enlaza con su metafísica." },
+      { k: "hf-racionalismo", n: 14, tit: "Rationalisme et empirisme : Descartes et Hume", txt: "En 1.º viste el álgebra de Boole, que convierte la lógica en un cálculo con 1 y 0; en 2.º verás la mathesis universalis de Descartes, su sueño de una ciencia universal del orden. Leibniz, que en ese tema aparece con las mónadas, lo llevó más lejos: imaginó una lengua en la que razonar fuera calcular." },
+      { k: "hf-analitica", n: 24, tit: "La philosophie analytique : Wittgenstein et le tournant linguistique", txt: "En 1.º viste la lógica de las conectivas y sus tablas de verdad, los cuantificadores y la lógica simbólica de Frege y de Russell; en 2.º verás cómo Russell y el primer Wittgenstein usan ese análisis lógico del lenguaje para buscar un lenguaje perfecto: es el giro lingüístico de la filosofía analítica." }
     ],
     "fil-t5": [
       { k: "hf-etica", n: 8, tit: "L'éthique classique : intellectualisme, vertus et eudaimonia", txt: "En 1re année, tu as vu la vertu comme juste milieu et l’intellectualisme de Socrate ; en 2e année, tu liras toute l’éthique classique : l’areté, l’eudaimonía et les réponses de Socrate, Platon et Aristote." },
@@ -400,7 +402,8 @@
       { k: "hf-ilustracion", n: 18, tit: "Le projet des Lumières : puissance et limites de la raison", txt: "En 1re année, tu as vu les droits de l’homme, le contrat social et la première vague féministe d’Olympe de Gouges et de Wollstonecraft ; en 2e année, tu verras le projet des Lumières d’où naissent ces droits et cette critique : la confiance en la raison et ses limites." }
     ],
     "hf-aa": [
-      { k: "fil-metafisica", n: "M", tit: "La réalité : qu'y a-t-il et comment est-ce ? (Métaphysique)", txt: "Tu as déjà vu en 1re année la substance, l’essence et le passage de la puissance à l’acte ; ici, tu as étudié le système complet d’Aristote : les catégories, les quatre causes et la téléologie." }
+      { k: "fil-metafisica", n: "M", tit: "La réalité : qu'y a-t-il et comment est-ce ? (Métaphysique)", txt: "Tu as déjà vu en 1re année la substance, l’essence et le passage de la puissance à l’acte ; ici, tu as étudié le système complet d’Aristote : les catégories, les quatre causes et la téléologie." },
+      { k: "fil-t4", n: 4, tit: "Logique et argumentation", txt: "Ya viste en 1.º los silogismos y el cuadrado de oposición (en el Rincón de lógica); aquí has visto esa lógica dentro del sistema de Aristóteles: el Órganon, la clasificación de las ciencias, las categorías y la teoría del silogismo ligada a su metafísica." }
     ],
     "hf-analitica": [
       { k: "fil-t4", n: 4, tit: "Logique et argumentation", txt: "Tu as déjà vu en 1re année la logique symbolique de Frege et de Russell ; ici, tu as vu comment cette analyse logique du langage donne naissance au tournant linguistique de Russell et de Wittgenstein." }
@@ -463,7 +466,8 @@
       { k: "fil-t1", n: 1, tit: "Qu’est-ce que la philosophie ?", txt: "Tu as déjà vu en 1re année l’arché de Thalès comme premier pas du logos ; ici, tu as parcouru les réponses des présocratiques à la question de la réalité et du principe de toutes choses." }
     ],
     "hf-racionalismo": [
-      { k: "fil-t3", n: 3, tit: "Que pouvons-nous connaître ?", txt: "Tu as déjà vu en 1re année le rationalisme et l’empirisme dans le tableau des sources de la connaissance ; ici, tu as lu Descartes et Hume de près : le doute, le cogito et la critique de la causalité." }
+      { k: "fil-t3", n: 3, tit: "Que pouvons-nous connaître ?", txt: "Tu as déjà vu en 1re année le rationalisme et l’empirisme dans le tableau des sources de la connaissance ; ici, tu as lu Descartes et Hume de près : le doute, le cogito et la critique de la causalité." },
+      { k: "fil-t4", n: 4, tit: "Logique et argumentation", txt: "Ya viste en 1.º el álgebra de Boole y la lógica binaria (1 y 0); aquí has visto la mathesis universalis de Descartes, el sueño de una ciencia universal del orden. Leibniz, que en este tema aparece con las mónadas, lo llevó más lejos: una lengua en la que razonar fuera calcular." }
     ],
     "hf-sofistas": [
       { k: "fil-t3", n: 3, tit: "Que pouvons-nous connaître ?", txt: "Tu as déjà vu en 1re année le relativisme de Protagoras — « l’homme est la mesure de toute chose » — parmi les positions face à la vérité ; ici, tu l’as situé dans son monde : les Lumières grecques et le tournant des sophistes vers l’être humain et la polis." }
