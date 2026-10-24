@@ -1,4 +1,4 @@
-// Generado por web_i18n/i18n_rebuild.js (fr) a partir de web/js/juegosucio.js. No editar a mano: editar la memoria tm/fr.json y regenerar.
+// Generado por web_i18n/i18n_rebuild.js (fr) a partir de web/js/logica_pca.js. No editar a mano: editar la memoria tm/fr.json y regenerar.
 const JUEGO_SUCIO = {
  "intro": "Arthur Schopenhauer (1788-1860) était un philosophe allemand réputé grincheux : regarde ses cheveux. Vers 1830, il a écrit un petit livre, <em>L'Art d'avoir toujours raison</em>, avec 38 « stratagèmes » : des trucs pour gagner une discussion même quand on a tort. Il ne l'a pas écrit pour que nous trichions : il disait qu'il faut les connaître pour qu'on ne nous les fasse pas. En voici 25.",
  "pista": "Les illustrations sont des caricatures et des tableaux anciens du domaine public, surtout d'Honoré Daumier, qui s'est moqué des avocats de son époque. Dans beaucoup d'entre elles, la blague est dans ce que disent les personnages : lis la légende. Regarde toujours ce que cherche celui qui triche : il ne veut pas savoir qui a raison, il veut gagner.",
@@ -20,7 +20,7 @@ const JUEGO_SUCIO = {
      "t": "Bien sûr, toi, tu veux qu'on n'étudie jamais !"
     }
    ],
-   "img": "media/juegosucio/exagerar.jpg",
+   "img": "media/logica_pca/exagerar.jpg",
    "w": 900,
    "h": 1567,
    "obra": "Francisco de Goya, <em>Le Pantin</em> (1791-1792). Musée du Prado.",
@@ -43,7 +43,7 @@ const JUEGO_SUCIO = {
      "t": "« Lista » ? Mais elle est encore en train de s'habiller !"
     }
    ],
-   "img": "media/juegosucio/palabras.jpg",
+   "img": "media/logica_pca/palabras.jpg",
    "w": 900,
    "h": 1145,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 20 (1845-1848).",
@@ -66,7 +66,7 @@ const JUEGO_SUCIO = {
      "t": "Ah bon ? Alors il faut laisser le portable pendant les examens ?"
     }
    ],
-   "img": "media/juegosucio/relativo.jpg",
+   "img": "media/logica_pca/relativo.jpg",
    "w": 900,
    "h": 721,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 15 (1845-1848).",
@@ -89,7 +89,7 @@ const JUEGO_SUCIO = {
      "t": "Parce que tout ce qu'il publie est vrai."
     }
    ],
-   "img": "media/juegosucio/circulo.jpg",
+   "img": "media/logica_pca/circulo.jpg",
    "w": 900,
    "h": 1185,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 12 (1845-1848).",
@@ -112,7 +112,7 @@ const JUEGO_SUCIO = {
      "t": "Mais non, ça ne me dérange pas, c'est que…!"
     }
    ],
-   "img": "media/juegosucio/enfadar.jpg",
+   "img": "media/logica_pca/enfadar.jpg",
    "w": 900,
    "h": 1200,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 9 (1845-1848).",
@@ -135,7 +135,7 @@ const JUEGO_SUCIO = {
      "t": "À cause de deux personnes ?"
     }
    ],
-   "img": "media/juegosucio/generalizar.jpg",
+   "img": "media/logica_pca/generalizar.jpg",
    "w": 900,
    "h": 626,
    "obra": "John James Audubon, <em>Cygne trompette</em>, planche 406 des <em>Oiseaux d'Amérique</em> (1838).",
@@ -158,7 +158,7 @@ const JUEGO_SUCIO = {
      "t": "Je n'ai pas copié : je me suis inspiré de ton travail."
     }
    ],
-   "img": "media/juegosucio/eufemismo.jpg",
+   "img": "media/logica_pca/eufemismo.jpg",
    "w": 900,
    "h": 707,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 11 (1845-1848).",
@@ -181,7 +181,7 @@ const JUEGO_SUCIO = {
      "t": "Et il n'y a pas une troisième porte ?"
     }
    ],
-   "img": "media/juegosucio/dosopciones.jpg",
+   "img": "media/logica_pca/dosopciones.jpg",
    "w": 900,
    "h": 762,
    "obra": "James Gillray, <em>Britannia entre Scylla et Charybde</em> (1793). Bibliothèque du Congrès, Washington.",
@@ -204,7 +204,7 @@ const JUEGO_SUCIO = {
      "t": "Mais tu n'as rien démontré…"
     }
    ],
-   "img": "media/juegosucio/victoria.jpg",
+   "img": "media/logica_pca/victoria.jpg",
    "w": 900,
    "h": 1209,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 35 (1845-1848).",
@@ -227,7 +227,7 @@ const JUEGO_SUCIO = {
      "t": "Et toi alors, l'autre jour, tu en as jeté un aussi !"
     }
    ],
-   "img": "media/juegosucio/tutambien.jpg",
+   "img": "media/logica_pca/tutambien.jpg",
    "w": 900,
    "h": 727,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 14 (1845-1848).",
@@ -250,7 +250,7 @@ const JUEGO_SUCIO = {
      "t": "Ce n'était pas copier : c'était comparer des réponses."
     }
    ],
-   "img": "media/juegosucio/distincion.jpg",
+   "img": "media/logica_pca/distincion.jpg",
    "w": 900,
    "h": 1213,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 19 (1845-1848).",
@@ -273,7 +273,7 @@ const JUEGO_SUCIO = {
      "t": "Écoute, l'économie est un système complexe où tout influence tout."
     }
    ],
-   "img": "media/juegosucio/general.jpg",
+   "img": "media/logica_pca/general.jpg",
    "w": 900,
    "h": 712,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 33 (1845-1848).",
@@ -296,7 +296,7 @@ const JUEGO_SUCIO = {
      "t": "Aujourd'hui à dix heures, demain à minuit… et dans un mois tu vivras dans la rue !"
     }
    ],
-   "img": "media/juegosucio/pendiente.jpg",
+   "img": "media/logica_pca/pendiente.jpg",
    "w": 900,
    "h": 796,
    "obra": "William Hogarth, <em>La Carrière d'un libertin</em>, planche 4 (1735).",
@@ -319,7 +319,7 @@ const JUEGO_SUCIO = {
      "t": "Eh bien, en Australie, il y en a des noirs."
     }
    ],
-   "img": "media/juegosucio/contraejemplo.jpg",
+   "img": "media/logica_pca/contraejemplo.jpg",
    "w": 900,
    "h": 1204,
    "obra": "John Gerrard Keulemans, <em>Cygne noir</em> (1869).",
@@ -342,7 +342,7 @@ const JUEGO_SUCIO = {
      "t": "C'est justement parce qu'il est petit qu'il faut le corriger, pour qu'il ne prenne pas de mauvaises habitudes."
     }
    ],
-   "img": "media/juegosucio/vuelta.jpg",
+   "img": "media/logica_pca/vuelta.jpg",
    "w": 900,
    "h": 1143,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 22 (1845-1848).",
@@ -365,7 +365,7 @@ const JUEGO_SUCIO = {
      "t": "Ha ! Et maintenant tu vas épouser une abeille ?"
     }
    ],
-   "img": "media/juegosucio/publico.jpg",
+   "img": "media/logica_pca/publico.jpg",
    "w": 900,
    "h": 1006,
    "obra": "William Hogarth, <em>Le Public riant</em> (1733). National Gallery of Art, Washington.",
@@ -388,7 +388,7 @@ const JUEGO_SUCIO = {
      "t": "Et vous avez vu quelles baskets porte le prof aujourd'hui ?"
     }
    ],
-   "img": "media/juegosucio/cambiartema.jpg",
+   "img": "media/logica_pca/cambiartema.jpg",
    "w": 900,
    "h": 683,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 30 (1845-1848).",
@@ -411,7 +411,7 @@ const JUEGO_SUCIO = {
      "t": "C'est un footballeur avec trois millions d'abonnés qui le dit !"
     }
    ],
-   "img": "media/juegosucio/autoridad.jpg",
+   "img": "media/logica_pca/autoridad.jpg",
    "w": 900,
    "h": 1258,
    "obra": "Francisco de Goya, <em>Caprice 37 : Le disciple en saura-t-il plus ?</em> (1799). Musée du Prado.",
@@ -434,7 +434,7 @@ const JUEGO_SUCIO = {
      "t": "Oh là là, c'est trop profond pour moi : je ne comprends pas."
     }
    ],
-   "img": "media/juegosucio/ironia.jpg",
+   "img": "media/logica_pca/ironia.jpg",
    "w": 900,
    "h": 1233,
    "obra": "Francisco de Goya, <em>Caprice 50 : Les Chinchillas</em> (1799). Musée du Prado.",
@@ -475,7 +475,7 @@ const JUEGO_SUCIO = {
      "t": "En théorie, c'est très bien, mais en pratique, ça ne marche pas."
     }
    ],
-   "img": "media/juegosucio/teoria.jpg",
+   "img": "media/logica_pca/teoria.jpg",
    "w": 900,
    "h": 1114,
    "obra": "Honoré Daumier, <em>Recherche infructueuse de la planète Le Verrier</em> (1846). National Gallery of Art, Washington.",
@@ -498,7 +498,7 @@ const JUEGO_SUCIO = {
      "t": "Ah oui ? Et qui fera les photos pour vos réseaux ?"
     }
    ],
-   "img": "media/juegosucio/interes.jpg",
+   "img": "media/logica_pca/interes.jpg",
    "w": 900,
    "h": 731,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 6 (1845-1848).",
@@ -521,7 +521,7 @@ const JUEGO_SUCIO = {
      "t": "Et ça veut dire quoi ?"
     }
    ],
-   "img": "media/juegosucio/palabreria.jpg",
+   "img": "media/logica_pca/palabreria.jpg",
    "w": 900,
    "h": 1276,
    "obra": "Francisco de Goya, <em>Caprice 53 : Quel bec d'or !</em> (1799). Musée du Prado.",
@@ -544,7 +544,7 @@ const JUEGO_SUCIO = {
      "t": "Ta grand-mère n'est pas médecin ! Donc fumer n'est pas mauvais."
     }
    ],
-   "img": "media/juegosucio/pruebamala.jpg",
+   "img": "media/logica_pca/pruebamala.jpg",
    "w": 900,
    "h": 750,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 17 (1845-1848).",
@@ -567,7 +567,7 @@ const JUEGO_SUCIO = {
      "t": "Et toi, qu'est-ce que tu en sais, tu as raté les maths !"
     }
    ],
-   "img": "media/juegosucio/insultar.jpg",
+   "img": "media/logica_pca/insultar.jpg",
    "w": 900,
    "h": 1196,
    "obra": "Honoré Daumier, <em>Les Gens de justice</em>, planche 32 (1845-1848).",

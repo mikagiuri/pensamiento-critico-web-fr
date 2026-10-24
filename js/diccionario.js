@@ -1,5 +1,5 @@
-// Generado por web_i18n/i18n_rebuild.js (fr) a partir de web/js/glosario.js. No editar a mano: editar la memoria tm/fr.json y regenerar.
-const GLOSARIO = [
+// Generado por web_i18n/i18n_rebuild.js (fr) a partir de web/js/diccionario.js. No editar a mano: editar la memoria tm/fr.json y regenerar.
+const DICCIONARIO = [
  {
   "subject": "ipc",
   "t": "Esprit critique",
@@ -512,7 +512,7 @@ const GLOSARIO = [
   "def": "Acheter en pensant à ce dont tu as vraiment besoin et à l'impact que cela a sur les personnes et la planète."
  }
 ];
-const GLOSARIO_TRAMPAS = {
+const DICCIONARIO_TRAMPAS = {
  "ipc": [
   [
    "Opinion",

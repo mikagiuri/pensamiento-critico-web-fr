@@ -4,7 +4,7 @@
    Se construye al cargar a partir del menú (#tabs) tal como lo deja cada build, así que cada web publicada
    (Filosofía 1.º, HF, ESO, y sus traducciones) muestra solo sus secciones, en el orden del menú, con una línea
    de qué hay en cada una y, cuando se puede contar, cuántos elementos tiene. Debajo, los temas de cada materia
-   con sus exploraciones (de Itinerario.temasDe) y, dentro de Ilustres, las fichas de época.
+   con sus exploraciones (de Itinerario.temasDe) y, dentro de Biografías, las fichas de época.
    Los textos van en MAPA_TXT y MAPA_DESC (se traducen con el diccionario de interfaz ui/<lang>.json). */
 const MAPA_TXT = {
   secciones: "Sections", temas: "Thèmes de chaque matière", tema: "Thème {n}", exploraciones: "Explorations",
@@ -24,9 +24,9 @@ const MAPA_DESC = {
   materiales: "Fiches, activités et documents à télécharger.",
   cuentos: "Des histoires pour penser, avec leurs questions.",
   tarjetas: "Cartes de révision : la question au recto, la réponse au verso.",
-  reto: "Des questions contre la montre pour réviser en jouant.",
+  retos: "Des questions contre la montre pour réviser en jouant.",
   parejas: "Jeu de mémoire : associe chaque concept à sa paire.",
-  glosario: "Les concepts de chaque thème, avec leur définition et leur origine.",
+  diccionario: "Les concepts de chaque thème, avec leur définition et leur origine.",
   biografias: "Biographies des penseurs et fiches de chaque époque.",
   citas: "Phrases célèbres des philosophes, expliquées.",
   adagios: "Devises classiques en latin et en grec, et citations célèbres des philosophes : ce qu’elles veulent dire et quand les utiliser.",
@@ -53,17 +53,17 @@ const MAPA_DESC = {
   cronogramas: "Frises chronologiques des auteurs et des époques.",
   genealogias: "Qui a influencé qui : maîtres, disciples et rivaux.",
   esquemas: "Schémas des idées principales de chaque thème.",
-  esqautor: "Un résumé par auteur, pour la PAU.",
+  resumenes: "Un résumé par auteur, pour la PAU.",
   diapositivas: "Présentations des thèmes.",
   rescritura: "Apprends à reformuler un texte avec tes propres mots.",
   pistas: "Des problèmes avec des indices qui se dévoilent peu à peu.",
   cuestionarios: "Questions à choix multiples sur chaque thème, avec correction.",
-  juegosucio: "Les pièges de la discussion, pour savoir les reconnaître.",
+  logica_pca: "Les pièges de la discussion, pour savoir les reconnaître.",
   unidad: "Toutes les questions d’une unité, réunies.",
   rubricas: "Comment sont corrigés les travaux et les examens.",
   evidencias: "Des traces d’apprentissage de l’année dernière.",
   recursos: "Liens et outils externes.",
-  pau: "Comment se déroule l’examen d’accès à l’université.",
+  prepara_PAU: "Comment se déroule l’examen d’accès à l’université.",
   comentario: "Comment faire un commentaire de texte, avec des exemples corrigés.",
   disertaciones: "Comment rédiger une dissertation, avec des modèles.",
   lecturas: "Les textes des auteurs à lire et à commenter.",
@@ -71,7 +71,7 @@ const MAPA_DESC = {
   signos: "Cours de langue des signes."
 };
 /* cuántos elementos tiene cada sección (si su colección está cargada en esta web) */
-const MAPA_CUENTA = { tarjetas: "DECKS", cuestionarios: "QUIZZES", glosario: "GLOSARIO", biografias: "BIOGRAFIAS", citas: "CITAS", adagios: "ADAGIOS", polemicas: "POLEMICAS", perseguidos: "PERSEGUIDOS", comunidades: "COMUNIDADES",
+const MAPA_CUENTA = { tarjetas: "DECKS", cuestionarios: "QUIZZES", diccionario: "DICCIONARIO", biografias: "BIOGRAFIAS", citas: "CITAS", adagios: "ADAGIOS", polemicas: "POLEMICAS", perseguidos: "PERSEGUIDOS", comunidades: "COMUNIDADES",
   infografias: "INFOGRAFIAS", mapas: "MAPS", esquemas: "ESQUEMAS", cronogramas: "CRONOGRAMAS", genealogias: "GENEALOGIAS", lecturas: "LECTURAS",
   galeria: "GALERIA", dilemas: "DILEMAS", disertaciones: "DISERTACIONES", nudos: "NUDOS", pistas: "PISTAS", materiales: "MATERIALS" };
 function mapaG(name){ try { return (0, eval)("typeof " + name + " !== 'undefined' ? " + name + " : undefined"); } catch (e){ return undefined; } }
