@@ -6,12 +6,12 @@ let theorySubject = "all";
 let theoryBlock = "all";
 let theoryShowAnexos = false;   /* (12-10, rediseño) las exploraciones salen ocultas por defecto */
 
-const THEORY_SUBJECTS = { fil: "Philosophie 1re", hf: "Histoire de la philosophie", ipc: "Pensée critique" };
+const THEORY_SUBJECTS = { fil: "Philosophie 1re", hf: "Histoire de la philosophie", ipc: "Pensée critique", fil4: "Filosofía 4.º ESO" };   // (25-10) fil4: solo web local
 const THEORY_EPOCAS = { ant: "Antique", med: "Médiévale", mod: "Moderne", ilu: "Lumières", con: "Contemporaine" };
 
 function renderTheoryFilter(){
   const box = document.getElementById("theoryfilter");
-  const subjBtns = ["all", "fil", "hf", "ipc"].map(s =>
+  const subjBtns = ["all", "fil", "hf", "ipc"].concat(Object.values(THEORY).some(t => t && t.subject === "fil4") ? ["fil4"] : []).map(s =>   /* (25-10) fil4 (4.º ESO) solo existe en la web local */
     '<button class="fbtn" data-subj="' + s + '" aria-pressed="' + (s === theorySubject) + '">' +
     (s === "all" ? "Toutes" : THEORY_SUBJECTS[s]) + '</button>'
   ).join("");
