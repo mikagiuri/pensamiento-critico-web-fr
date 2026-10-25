@@ -1087,7 +1087,7 @@ const DUELO_TEMAS = [
     "peso": 2
    },
    {
-    "t": "D’après toi, l’homme se sauve tout seul, par ses propres forces, et la grâce de Dieu est de trop.",
+    "t": "D’après toi, l’être humain se sauve tout seul, par ses propres forces, et la grâce de Dieu est de trop.",
     "f": "deformar",
     "peso": 3
    },
@@ -1783,7 +1783,7 @@ const DUELO_TEMAS = [
     "peso": 3
    },
    {
-    "t": "Ou tout est grâce de Dieu, ou tout est mérite de l’homme : il n’y a pas de juste milieu.",
+    "t": "Ou tout est grâce de Dieu, ou tout est mérite de l’être humain : il n’y a pas de juste milieu.",
     "f": "dos",
     "peso": 2
    },
@@ -1820,7 +1820,7 @@ const DUELO_TEMAS = [
     "f": "persona"
    },
    {
-    "t": "Ou l’homme est entièrement libre, ou il est une marionnette de Dieu : choisis.",
+    "t": "Ou l’être humain est entièrement libre, ou il est une marionnette de Dieu : choisis.",
     "f": "dos"
    }
   ]
@@ -1891,7 +1891,7 @@ const DUELO_TEMAS = [
     "str": 3
    },
    {
-    "t": "Il n’y a pas de péché dans l’homme s’il n’y a aucune part de volonté propre ou d’assentiment, et un nouveau-né n’a encore rien voulu.",
+    "t": "Il n’y a pas de péché dans l’être humain s’il n’y a aucune part de volonté propre ou d’assentiment, et un nouveau-né n’a encore rien voulu.",
     "str": 3
    },
    {
