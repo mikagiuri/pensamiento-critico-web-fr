@@ -16,7 +16,7 @@ let quizReviewing = false;  // true si repasamos solo los fallos (no toca la mej
 
 function quizShuffle(a){ a = a.slice(); for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
-const QUIZ_SUBJECTS = { fil: "Philosophie 1re", hf: "Histoire de la philosophie", ipc: "Pensée critique" };
+const QUIZ_SUBJECTS = { fil: "Philosophie 1re", hf: "Histoire de la philosophie", ipc: "Pensée critique", mat: "Matemáticas I", bio: "Biología" };   // (01-11) mat y bio: Refuerzos
 const QUIZ_EPOCAS = { ant: "Antique", med: "Médiévale", mod: "Moderne", ilu: "Lumières", con: "Contemporaine" };
 /* (12-10) criterio del profesor: en 1.º la fila «Tema» nombra el ÁMBITO filosófico; el código T1… va al tooltip
    y la cabecera de grupo. En HF y en la web local, como antes. */
@@ -30,6 +30,9 @@ const QUIZ_TEMAS = {
   hf: { T1: "Historicité et universalité", T2: "Les méthodes de la philosophie", T3: "Du mythe au logos", T4: "Les présocratiques", T5: "Sophistes, Socrate et Aspasie", T6: "Platon : les Idées et La République", T7: "Anthropologie classique", T8: "Éthique classique", T9: "Politique classique", T10: "L’hellénisme",
     T11: "Philosophie médiévale et universaux", T12: "Foi et raison", T13: "Renaissance et révolution scientifique", T14: "Rationalisme et empirisme", T15: "Dualisme et matérialisme", T16: "Société et pouvoir : le contrat social", T17: "Utilitarisme et libéralisme",
     T18: "Les Lumières", T19: "Kant : critique et métaphysique", T20: "Éthiques du bonheur et du devoir", T21: "Les philosophes du soupçon", T22: "Critique du capitalisme : de Marx à Rawls", T23: "Nietzsche et la postmodernité", T24: "Philosophie analytique", T25: "L’existentialisme", T26: "Le féminisme", T27: "Défis du XXIe siècle" },
+  /* (01-11) Refuerzos: los temas del Decreto 76/2023. Un cuestionario «mat-tN…» o «bio-tN…» va solo a su tema (quizTemaDe) */
+  mat: { T1: "Números reales", T2: "Números complejos", T3: "Técnicas de conteo", T4: "Ecuaciones, inecuaciones y sistemas", T5: "Trigonometría", T6: "Vectores en el plano", T7: "Geometría analítica del plano", T8: "Funciones", T9: "Límites y continuidad", T10: "Derivadas", T11: "Estadística bidimensional", T12: "Probabilidad" },
+  bio: { T1: "El proyecto científico", T2: "Historia de la Tierra y de la vida", T3: "La dinámica y la composición de la Tierra", T4: "Ecología y sostenibilidad", T5: "Fisiología e histología vegetal", T6: "Fisiología e histología animal", T7: "Los microorganismos" },
   ipc: { pensar: "Penser par soi-même", argumentar: "Bien argumenter", falacias: "Sophismes et infox", sesgos: "Biais", dialogo: "Dialoguer", medios: "Médias et publicité", grupo: "Le groupe", huella: "Mon empreinte sur la planète" }
 };
 const QUIZ_TEMA = {
@@ -137,7 +140,8 @@ function lexMontar(){
     if (gr.tema !== "otros") QUIZ_TEMA[k] = gr.tema;
   });
 }
-function quizTemaDe(k){ const m = QUIZ_TEMAS[QUIZZES[k].subject] || {}; return m[QUIZ_TEMA[k]] ? QUIZ_TEMA[k] : "otros"; }
+function quizTemaDe(k){ const m = QUIZ_TEMAS[QUIZZES[k].subject] || {}, r = /^(?:mat|bio)-t(\d+)/.exec(k), t = QUIZ_TEMA[k] || (r ? "T" + r[1] : null);   // (01-11) Refuerzos: el tema sale de la clave
+  return m[t] ? t : "otros"; }
 function quizEnFiltro(k, q, conTema){
   if (quizSubject !== "all" && q.subject !== quizSubject) return false;
   if (quizSubject === "hf" && quizBlock !== "all" && window.Epocas && window.Epocas.epocaDe("cuestionarios", k, q) !== quizBlock) return false;
@@ -157,7 +161,7 @@ const quizTemaNum = t => /^T\d+$/.test(t);
 
 function renderQuizFilter(){
   const box = document.getElementById("quizfilter");
-  const subjBtns = ["all", "fil", "hf", "ipc"].map(s =>
+  const subjBtns = ["all", "fil", "hf", "ipc"].concat(["mat", "bio"].filter(s => Object.values(QUIZZES).some(x => x && x.subject === s))).map(s =>   // (01-11) mat y bio: solo si hay (maestra y Refuerzos)
     '<button class="fbtn" data-subj="' + s + '" aria-pressed="' + (s === quizSubject) + '">' +
     (s === "all" ? "Toutes" : QUIZ_SUBJECTS[s]) + '</button>'
   ).join("");

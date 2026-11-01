@@ -336,7 +336,7 @@ const INFOGRAFIAS = {
       "h": "Besoin ou désir ?",
       "rows": [
        {
-        "t": "Nécessité",
+        "t": "Besoin fondamental",
         "p": "Ce qu'il faut pour <b>vivre</b> : manger, un abri, la santé, l'affection."
        },
        {

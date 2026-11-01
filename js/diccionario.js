@@ -308,6 +308,33 @@ const DICCIONARIO = [
  },
  {
   "subject": "ipc",
+  "t": "Besoin fondamental",
+  "id": "g-ipc-necesidad-basica",
+  "area": "Médias et réseaux",
+  "tema": "Pensée critique · Médias et réseaux",
+  "def": "Quelque chose dont nous avons besoin pour bien vivre (manger, se couvrir, apprendre…).",
+  "k": "medios"
+ },
+ {
+  "subject": "ipc",
+  "t": "Désir superflu",
+  "id": "g-ipc-deseo-superfluo",
+  "area": "Médias et réseaux",
+  "tema": "Pensée critique · Médias et réseaux",
+  "def": "Quelque chose que nous voulons, mais dont nous pourrions nous passer pour vivre tout aussi bien.",
+  "k": "medios"
+ },
+ {
+  "subject": "ipc",
+  "t": "Effet Diderot",
+  "id": "g-ipc-efecto-diderot",
+  "area": "Médias et réseaux",
+  "tema": "Pensée critique · Médias et réseaux",
+  "def": "Quand un nouvel achat nous amène à en désirer d'autres qui « aillent » avec lui, l'un après l'autre.",
+  "k": "medios"
+ },
+ {
+  "subject": "ipc",
   "t": "Vérifier (recouper)",
   "id": "g-ipc-verificar",
   "area": "Médias et réseaux",
