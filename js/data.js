@@ -98,7 +98,7 @@ const SUBJECTS = {
 };
 const DECKS = {
  "ipc-conceptos": {
-  "name": "Pensée critique · Concepts de base",
+  "name": "Concepts de base",
   "subject": "ipc",
   "cards": [
    [
@@ -159,7 +159,7 @@ const DECKS = {
   ]
  },
  "ipc-falacias": {
-  "name": "Pensée critique · Sophismes",
+  "name": "Sophismes",
   "subject": "ipc",
   "cards": [
    [
@@ -215,7 +215,7 @@ const DECKS = {
   ]
  },
  "ipc-sesgos": {
-  "name": "Pensée critique · Biais cognitifs",
+  "name": "Biais cognitifs",
   "subject": "ipc",
   "cards": [
    [
@@ -256,7 +256,7 @@ const DECKS = {
   ]
  },
  "ipc-publicidad": {
-  "name": "Pensée critique · Publicité et médias",
+  "name": "Publicité et médias",
   "subject": "ipc",
   "cards": [
    [
@@ -302,7 +302,7 @@ const DECKS = {
   ]
  },
  "ipc-huella": {
-  "name": "Pensée critique · Mon empreinte sur la planète",
+  "name": "Mon empreinte sur la planète",
   "subject": "ipc",
   "cards": [
    [
@@ -348,7 +348,7 @@ const DECKS = {
   ]
  },
  "ipc-prejuicios": {
-  "name": "Pensée critique · Préjugés et stéréotypes",
+  "name": "Préjugés et stéréotypes",
   "subject": "ipc",
   "cards": [
    [
@@ -414,7 +414,7 @@ const DECKS = {
   ]
  },
  "ipc-moda": {
-  "name": "Pensée critique · Fast fashion (documentaire)",
+  "name": "Fast fashion (documentaire)",
   "subject": "ipc",
   "cards": [
    [
@@ -1503,7 +1503,7 @@ const QUIZZES = {
   ]
  },
  "ipc-pensar-banco": {
-  "name": "Penser par soi-même (banque élargie)",
+  "name": "Penser par soi-même",
   "subject": "ipc",
   "items": [
    {
@@ -1784,7 +1784,7 @@ const QUIZZES = {
   ]
  },
  "ipc-argumentar-banco": {
-  "name": "Bien argumenter (banque élargie)",
+  "name": "Bien argumenter",
   "subject": "ipc",
   "items": [
    {
@@ -2098,7 +2098,7 @@ const QUIZZES = {
   ]
  },
  "ipc-falacias-banco": {
-  "name": "Les sophismes : les ruses du mauvais raisonnement (banque élargie)",
+  "name": "Les sophismes : les ruses du mauvais raisonnement",
   "subject": "ipc",
   "items": [
    {
@@ -2434,7 +2434,7 @@ const QUIZZES = {
   ]
  },
  "ipc-sesgos-banco": {
-  "name": "Les pièges de l'esprit : les biais (banque élargie)",
+  "name": "Les pièges de l'esprit : les biais",
   "subject": "ipc",
   "items": [
    {
@@ -2770,7 +2770,7 @@ const QUIZZES = {
   ]
  },
  "ipc-dialogo-banco": {
-  "name": "L'art du dialogue (banque élargie)",
+  "name": "L'art de dialoguer",
   "subject": "ipc",
   "items": [
    {
@@ -2985,7 +2985,7 @@ const QUIZZES = {
   ]
  },
  "ipc-medios-banco": {
-  "name": "Regarde les médias à la loupe (banque élargie)",
+  "name": "Regarde les médias à la loupe",
   "subject": "ipc",
   "items": [
    {
@@ -3299,7 +3299,7 @@ const QUIZZES = {
   ]
  },
  "ipc-grupo-banco": {
-  "name": "Sommes-nous un groupe ou un tas ? La cohésion (banque élargie)",
+  "name": "Sommes-nous un groupe ou un tas ? La cohésion",
   "subject": "ipc",
   "items": [
    {
